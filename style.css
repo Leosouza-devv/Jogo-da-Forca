@@ -1,0 +1,1422 @@
+/* -------------------------------------------------------------------------------------------- */
+/*(INICIO) estilizações padrões CSS */
+:root {
+    /* cores dos fundos */
+    --cor_fundo:rgb(40, 40, 44);
+    --cor_fundo_claro: #3c3d41;
+    --cor_fundo_bege:#ffd490;
+    /* cores das letras */
+    --cor_letra_branca: #fff;
+    --cor_letra_verde: #11be90;
+    --cor_letra_cinza_claro: #AFB6BB;
+    --cor_erro:#ab0944;
+    /* font-family */
+    --font_gameficada: "Silkscreen", sans-serif;
+    --font_padrao: "Fira Sans", sans-serif;
+
+    /* cores dos botões */
+    --cor_buttom: #038764;
+    --cor_buttom_hover: #09ab80;
+
+    /* cores trabalhadas posteriomente no js */
+    --buttom_js: #ffd490;
+    --letra_forca_js:#fff;
+
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+html::after,
+html::before {
+    font-size: 1.6rem;
+    background-color: var(--cor_fundo);
+    font-family: var(--font_padrao);
+
+}
+
+body,
+body::after,
+body::before {
+    font-size: 60.5%;
+}
+
+/* (FIM) estilizações padrões CSS */
+
+/* -------------------------------------------------------------------------------------------- */
+
+/*(INICIO)estilização especifica*
+
+    /* -------------------------------------------------------------------------------------------- */
+
+/* (INICIO) estilizações do game */
+#btn_audio{
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    font-size: 24px;
+    height: 50px;
+    max-width: 50px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor_letra_branca);
+    padding: 12px;
+    background-color: var(--cor_fundo_claro);
+    cursor: pointer;
+    border-radius: 100%;
+    transition: ease-in-out .2s;
+    z-index: 99;
+    &:hover{
+        transform: scale(1.15);
+        background-color: var(--cor_buttom);
+        color:var() ;
+
+
+    }
+    
+}
+section.section_forca {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+
+    /* O display das telas é por padrão 'none' para ser atualizado no JS dependendo de qual tela você esteja, menos a tela 1. */
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5),
+    &:nth-child(6), 
+    &:nth-child(7), 
+    &:nth-child(8) {
+        display: none;
+    }
+
+
+    /* -------------------------------------------------------------------------------------------- */
+    /*(INICIO) estilizando botões do game  */
+    & .btn {
+        max-width: 200px;
+        max-width: fit-content;
+        min-width: 120px;
+        min-height: 7vh;
+        padding: 12px;
+        background-color: var(--cor_buttom);
+        font-size: 27px;
+        font-weight: bold;
+        border: 3px rgba(0, 0, 0, 0.226) solid;
+        border-radius: 20px;
+        color: var(--cor_letra_branca);
+        cursor: pointer;
+        margin: 10px;
+        transition: ease-in-out .2s;
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: var(--cor_buttom_hover);
+        }
+
+    }
+
+    /*(FIM) estilizando botões do game */
+    
+    /* -------------------------------------------------------------------------------------------- */
+
+    /* (INICIO)Estilizando tela(1) pagina inicial*/
+    &#tela_inicial {
+
+        display: flex;
+        /*este é de padrão flex por se tratar da pagina 1*/
+        justify-content: center;
+    }
+
+    & .forca {
+        min-width: 45%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & div {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & img {
+                min-width: 10px;
+                width: 400px;
+                border-radius: 12px;
+            }
+
+        }
+    }
+
+
+    & .inicial {
+        width: 55%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+
+    }
+
+    & .btn_iniciar_comoJogar {
+        min-width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        & h1 {
+            font-size: 55px;
+            font-family: var(--font_gameficada);
+            font-weight: bold;
+            text-align: center;
+            color: var(--cor_letra_branca);
+
+        }
+
+
+    }
+
+
+    /* (FIM)Estilizando tela(1) pagina inicial*/
+
+
+
+    /* -------------------------------------------------------------------------------------------- */
+    /* (INICIO)estilizando tela(2) que define o modo de jogo --sozinho ou em grupo--  */
+    &#modo_jogo {
+        justify-content: center;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+
+        & header {
+            
+            position: absolute;
+            top: 5%;
+            left: 2%;
+            margin: 10px;
+
+        }
+
+        
+
+        & footer {
+            position: absolute;
+            bottom: 5%;
+            right: 2%;
+            margin: 10px;
+        }
+
+
+        & div.escolha_modo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            gap: 50px;
+            & div.modos{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            & h2 {
+                font-size: 40px;
+                font-family: var(--font_gameficada);
+                color: var(--cor_letra_branca);
+                text-align: center;
+                @media (max-width: 500px){
+                    &{
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    /* (FIM)estilizando tela(2) que define o modo de jogo --sozinho ou em grupo--  */
+
+    /* -------------------------------------------------------------------------------------------- */
+
+    /* (INICIO) estilizando tela(3) de coleta de palavras */
+    &#coletor_palavra {
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+        position: relative;
+
+
+        /* (INICIO)estilizando elementos que pertencem a section #coletor_palavras  */
+        & header {
+            
+            position: absolute;
+            top: 5%;
+            left: 2%;
+            margin: 10px;
+
+        }
+
+        
+
+        & footer {
+            position: absolute;
+            bottom: 5%;
+            right: 2%;
+            margin: 10px;
+        }
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            gap: 50px;
+        }
+
+        /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
+
+
+        /* (INICIO) estilizando os inputs que recebe a palavra e as dicas */
+        & div.tema_palavra {
+            width: 55%;
+            min-width: 300px;
+            max-width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            /* estilizando o alerta caso o texto não for mensionado */
+            & .palavra,
+            & .tema {
+
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                transition: ease-in-out .2s;
+
+                /* estilizando sinal de alerta */
+                & div {
+                    right: 0;
+                    transition: ease-in-out .2s;
+                    display: none;
+                    width: 50px;
+                    height: 50px;
+                    font-size: 40px;
+                    border-radius: 15px;
+                    background-color: var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
+                    color: var(--cor_letra_branca);
+
+
+                }
+            }
+
+        }
+
+        & .sub_tit_temaEpalavra {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font_gameficada);
+            font-size: 30px;
+            color: var(--cor_letra_branca);
+            text-align: center;
+
+        }
+
+        & input.input_coletor {
+            width: 80%;
+            min-width: 200px;
+            max-width: 100%;
+            min-height: 9vh;
+            border-radius: 20px;
+            outline: none;
+            border: solid 6px var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2.5%;
+            color: #252528;
+            font-weight: bold;
+            transition: ease-in-out .2s;
+
+
+            /* estilizando o placeholder do input */
+            &::placeholder {
+                font-size: 20px;
+                position: absolute;
+                left: 2.5%;
+                font-weight: bold;
+                color: var(--cor_letra_cinza_claro);
+            }
+
+            /* estilizando o input ativado */
+            &:focus {
+                transform: scale(1.05);
+            }
+
+
+        }
+
+
+
+
+
+        /* (FIM) estilizando os inputs que recebe a palavra e as dicas */
+
+    }
+
+    /* (FIM) estilizando tela(3) de coleta de palavras */
+
+    /* -------------------------------------------------------------------------------------------- */
+
+    /* (INICIO) estilizando tela(4) que explica o game */
+    &#como_funciona {
+        position: relative;
+        & header {
+            
+            position: absolute;
+            top: 5%;
+            left: 2%;
+            margin: 10px;
+
+        }
+
+        
+
+        & footer {
+            position: absolute;
+            bottom: 5%;
+            right: 2%;
+            margin: 10px;
+        }
+
+        & div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            gap: 50px;
+        }
+    }
+
+    /* (FIM) estilizando tela(4) que explica o game */
+
+    /* -------------------------------------------------------------------------------------------- */
+
+    /* (INICIO) estilizando a tela(5) do game */
+    &#game {
+        
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        & header{
+            & div#sair{
+                position: absolute;
+                left: 5%;
+                top: 5%;
+                font-size: 24px;
+                height: 50px;
+                max-width: 50px;
+                min-width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--cor_letra_branca);
+                padding: 12px;
+                background-color: var(--cor_fundo_claro);
+                cursor: pointer;
+                border-radius: 100%;
+                transition: ease-in-out .2s;
+                &:hover{
+                    transform: scale(1.15);
+                    background-color: var(--cor_buttom);
+                    color:var() ;
+
+
+                }
+            }
+            /* estilizando parte da confirmação para saida da tela do game */
+            & #confirmacao_saida{
+                background-color: #252528da;
+                width: 100%;
+                height: 100vh;
+                position: fixed;
+                top:0;
+                display: none;
+                justify-content: center;
+                align-items: center;
+                z-index: 2;
+                & .confirmacao_saida_aux{
+                    background-color: var(--cor_fundo_claro);
+                    width: 300px;
+                    height: 300px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    border-radius: 20px;
+                    z-index: 1;
+                    gap: 30px;
+                    & div{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+
+                    & h2{
+                        text-align: center;
+                        color: var(--cor_letra_branca);
+                        font-size: 30px;
+                        margin: 10px;
+
+                    }
+                }
+                
+            }
+
+        }
+        
+
+        & div.forca {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+            
+            /* estilizando botão da dica e do tema */
+            & label#dica_tema{
+                font-size: 24px;
+                min-width: 50px;
+                height: 50px;
+                max-width: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--cor_letra_branca);
+                padding: 12px;
+                margin-bottom: 15px;
+                background-color: var(--cor_fundo_claro);
+                cursor: pointer;
+                border-radius: 25px;
+                transition: ease-in-out .2s;
+                &:hover{
+                    transform: scale(1.15);
+                    background-color: var(--cor_buttom);
+
+                }
+               
+
+
+            }
+            
+            & input#dica_check{
+                display: none;
+
+                &:checked ~ & label#dica_tema{
+                    background-color: var(--cor_buttom);
+                }
+            }
+           
+            /* estilizando container que irá conter a dica ou o tema  */
+            & div#dica_tema_txt{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                background-color: var(--cor_buttom);
+                min-width: 200px;
+                width: fit-content;
+                height: 70px;
+                padding: 5px 10px;
+                border-radius: 15px;
+                position: relative;
+                margin: 10px;
+                transition: ease-in-out .2s;
+                opacity: 0;
+                
+
+                & #seta{
+                    font-size: 55px;
+                    position: absolute;
+                    top: -45%;
+                    color: var(--cor_buttom);
+                }
+
+                & p{
+                    color: var(--cor_letra_branca);
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+                
+            }
+
+            & #img_forca_game{
+                min-width: 350px;
+                min-height: 350px;
+                & .img_forca {
+                    padding: 20px;
+                    border-radius: 30px;
+                    animation: fadeIn 1.5s ease-in-out 0s forwards; /* Adicionando a animação */
+                }
+            }
+            
+
+            
+            
+        }
+
+
+        & div.teclado_palavraOculta {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap:40px;
+
+            /* estilizando palavra oculta */
+            & #palavraOculta{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                flex-wrap: wrap;
+                
+                & div{
+                    min-width: 30px;
+                    font-size: 25px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    display: inline-flex;
+                    justify-content: center;
+                    align-items: center;
+                    color: var(--letra_forca_js);/*esta cor ira ser trabalhada no js posteriormente*/
+                    background-color:#808fa611 ;
+                    border-bottom: solid 3px var(--cor_letra_branca);
+                    border-radius: 5px;
+                    & p{
+                        padding: 10px 18px;
+                    }
+                
+                }
+            }
+            /* estilizando teclado do game */
+            & #teclado {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+                padding: 10px;
+                overflow: hidden;
+                
+                
+
+                & .t1 {
+                    display: grid;
+                    grid-template-columns: repeat(10, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+
+                }
+
+                & .t2 {
+                    display: grid;
+                    grid-template-columns: repeat(9, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+                }
+
+                & .t3 {
+                    display: grid;
+                    grid-template-columns: repeat(7, 1fr);
+                    grid-template-rows: repeat(1, 1fr);
+
+                }
+                
+                & div{
+                    display: flex;
+                    flex-grow: 1;
+
+                }
+
+                & div .tecla {
+                    
+                    width: 100%;
+                    height: 100%;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 40px;
+                    background-color: var(--cor_fundo_claro);
+                    color: var(--cor_letra_branca);
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: ease-in-out .1s;
+                    justify-self: center;
+
+                    &:hover {
+                        transform: scale(1.12);
+                        background-color: #545559;
+
+                    }
+
+                    
+                }
+
+
+            }
+        }
+    }
+
+    
+    /* (FIM) estilizando a tela(5) do game */
+
+    /* -------------------------------------------------------------------------------------------- */
+
+    /* (INICIO) estilizando a tela(6) fim do game/jogar novamente  */
+    &#fim_game {
+
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+
+        & div.fim_txt {
+            color: var(--cor_letra_branca);
+            font-family: var(--font_gameficada);
+            font-size: 40px;
+            text-align: center;
+
+            & span{
+                font-family: var(--font_padrao);
+                font-size: 60%;
+                color: var(--cor_buttom_hover);
+
+            }
+
+
+        }
+
+        & button {
+            padding: 10px;
+        }
+
+    }
+
+    /* (FIM) estilizando a tela(6) fim do game/ jogar novamente  */
+
+    /* -------------------------------------------------------------------------------------------- */
+    /*(INICIO) Estilização para mobile [todas as telas] */
+
+
+    /* Tela 1,2, 3 e 6*/
+    @media (min-width:1250px){
+
+
+
+
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            flex-wrap: nowrap;
+            & .forca {
+                min-width: 50%;
+                height: auto;
+                
+
+                
+
+                & .img_forca {
+                    width: 500px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas, & .t1, & .t2, & .t3 {
+                        gap: 7px;
+                        & div.tecla{
+                            min-width: 60px;
+                            min-height: 60px;
+                            max-width: 60px;
+                            max-height: 60px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+    @media (min-width:1050px){
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            
+            & .forca {
+                min-width: 50%;
+                height: auto;
+                
+
+                
+
+                & .img_forca {
+                    width: 350px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas, & .t1, & .t2, & .t3 {
+                        gap: 7px;
+                        & div.tecla{
+                            min-width: 60px;
+                            min-height: 60px;
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    @media (max-width: 1050px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            & .forca {
+                min-width: 45%;
+                height: 100vh;
+
+                
+
+                & .img_forca {
+                    width: 350px;
+                }
+            }
+
+            & .inicial {
+                padding: 1px;
+                width: 55%;
+                height: 100vh;
+
+            }
+        }
+
+        /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+        &#game {
+            & .forca {
+                min-width: 100%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 350px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas, & .t1, & .t2, & .t3 {
+                        gap: 7px;
+                        & div.tecla{
+                            min-width: 55px;
+                            min-height: 55px;
+                            max-width: 90%;
+                            max-height: 90%;
+
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 40px;
+        }
+
+        h2.sub {
+            font-size: 35px;
+        }
+
+        .btn {
+            font-size: 25px;
+        }
+
+    }
+
+    @media (max-width: 800px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            & .forca {
+                min-width: 50%;
+                height: 100vh;
+
+                .img_forca {
+                    max-width: 300px;
+                }
+
+            }
+
+            & .inicial {
+                text-align: center;
+                width: 50%;
+                height: 100vh;
+
+
+            }
+        }
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 70%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 350px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas {
+                        & div.tecla{
+                            min-width: 55px;
+                            min-height: 55px;
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 33px;
+        }
+
+        h2.sub {
+            font-size: 35px;
+        }
+
+        .btn {
+            font-size: 25px;
+        }
+
+
+
+    }
+
+    @media (max-width: 700px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            .forca {
+                min-width: 100%;
+                height: 60vh;
+
+                .img_forca {
+                    max-width: 600px;
+                }
+            }
+
+
+            .inicial {
+                width: 100%;
+                height: 40vh;
+            }
+        }
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 40%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 300px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas {
+                        & div.tecla{
+                            min-width: 45px;
+                            min-height: 45px;
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 35px;
+        }
+
+        h2.sub {
+            font-size: 35px;
+        }
+
+        .btn {
+            font-size: 25px;
+        }
+
+
+
+    }
+
+    @media (max-width: 640px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            .forca {
+                min-width: 100%;
+                height: 60vh;
+
+                .img_forca {
+                    max-width: 500px;
+                }
+
+            }
+
+            .inicial {
+
+                width: 100%;
+                height: 40vh;
+
+
+
+            }
+        }
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 50%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 300px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas {
+                        & div.tecla{
+                            min-width: 45px;
+                            min-height: 45px;
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 35px;
+        }
+
+        h2.sub {
+            font-size: 30px;
+        }
+
+        .btn {
+            font-size: 25px;
+        }
+
+
+
+    }
+    @media (max-width: 560px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            .forca {
+                min-width: 100%;
+                height: 60vh;
+
+                .img_forca {
+                    max-width: 500px;
+                }
+
+            }
+
+            .inicial {
+
+                width: 100%;
+                height: 40vh;
+
+
+
+            }
+        }
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 70%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 300px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas {
+                        
+                        & div.tecla{
+                            min-width: 40px;
+                            min-height: 40px;
+                            max-width: 90%;
+                            max-height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 35px;
+        }
+
+        h2.sub {
+            font-size: 30px;
+        }
+
+        .btn {
+            font-size: 25px;
+        }
+
+
+
+    }
+
+    @media (max-width: 480px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            .forca {
+                min-width: 100%;
+                height: 60vh;
+                margin: 0;
+
+                .img_forca {
+                    max-width: 300px;
+                }
+
+
+            }
+
+
+            .inicial {
+
+                width: 100%;
+                height: 40vh;
+
+            }
+        }
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 70%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 350px;
+                }
+            }
+
+            & div {
+                min-width: 50%;
+                height:auto;
+
+                & div {
+                    & div.teclas, & .t1, & .t2, & .t3 {
+                        gap: 2px;
+                        & div.tecla{
+                            min-width: 10px;
+                            min-height: 10px;
+                            padding: 5px 12px;
+                            
+                        }
+                    }
+                }
+            }
+
+            & div.palavraOculta{
+                & div{
+                    transform: scale(.6);
+                }
+                
+            }
+        }
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 30px;
+        }
+
+        h2.sub {
+            font-size: 30px;
+        }
+
+        .btn {
+            font-size: 20px;
+        }
+
+
+    }
+
+    @media (max-width: 400px) {
+
+        /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+        &#tela_inicial {
+            .forca {
+                min-width: 100%;
+                height: 50vh;
+
+                .img_forca {
+                    max-width: 250px;
+                }
+
+            }
+
+            .inicial {
+                padding: 1px;
+                width: 100%;
+                height: 50vh;
+
+            }
+        }
+
+         /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+         &#game {
+            & .forca {
+                min-width: 70%;
+                height: auto;
+
+                
+
+                & .img_forca {
+                    width: 300px;
+                }
+            }
+
+            & div {
+                min-width: 100%;
+                height:auto;
+
+                & div {
+                    & div.teclas, & .t1, & .t2, & .t3 {
+                    
+                        & div.tecla{
+                            max-width: 100%;
+                            max-height: 50px;
+                            padding: 15px 10px;
+
+                        }
+                    }
+                }
+            }
+
+            & div.palavraOculta{
+                & div.P_O{
+                    transform: scale(.3);
+                }
+                
+            }
+        }
+
+        /* estilização geral [todas as paginas]*/
+        h1.name_game {
+            font-size: 27px;
+        }
+
+        h2.sub {
+            font-size: 25px;
+        }
+
+        .btn {
+            font-size: 18px;
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+    /* (FIM) Estilização mobile [todas as telas] */
+
+
+}
+
+
+/*(INICIO) Animações [todas as animações]  */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Fica completamente visível */
+    }
+}
+/* (FIM) Animações [todas as animações]*/
+/*(INICIO) estilizando rodapé do site */
+footer#rodape_site {
+    width: 100%;
+    min-height: 10vh;
+    background-color: var(--cor_fundo_claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: fixed;
+    text-align: center;
+    overflow: hidden;
+    bottom: 0px;
+
+    @media(max-width:1050px) {
+        & {
+            position: relative;
+
+        }
+    }
+
+    & div {
+        margin: 15px 50px;
+
+        &.logo {
+            font-size: 30px;
+            font-family: "Silkscreen", sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: var(--cor_letra_branca);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.devs {
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #AFB6BB;
+
+        }
+
+        &.direitos {
+            font-size: 15px;
+            color: var(--cor_letra_verde);
+        }
+    }
+}
+
+/*(FIM) estilizando rodapé do site */
+
+/* (FIM) estilizações do game*/
+
+
+
+/*(FIM)estilização especifica*/

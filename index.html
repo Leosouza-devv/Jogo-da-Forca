@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+    <title>Jogo da forca</title>
+    <!-- codigo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- codigo JavaScript -->
+    <script src="javascri.js" defer ></script>
+
+    <!-- script referente aos icones -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
+    <!-- links referentes as fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <main>
+        <!--(INICIO) audios do game -->
+        <section>
+            <!-- SOM DE FUNDO DO GAME -->
+            <audio src="audio/Chill Gaming Mix Lofi Beats 1 Hour _2(MP3_160K).mp3" loop id="audio_fundo"></audio>
+            <div id="btn_audio" onclick="trilha(); btn_som();"><ion-icon name="volume-mute"></ion-icon></div>
+            
+            <!-- SOM DOS BOTÕES DO GAME -->
+            <audio src="audio/click.mp3" id="audio_click"></audio>
+
+            <!-- SOM PERDENDO A VIDA (ERRANDO A TECLA ERRADA)-->
+            <audio src="audio/tecla_errada.mp3" id="audio_tecla_errada"></audio>
+
+            <!-- SOM ACERTANDO A TECLA -->
+            <audio src="audio/tecla_certa.mp3" id="audio_tecla_certa"></audio>
+
+            <!-- SOM PERDENDO O GAME -->
+            <audio src="audio/fracasso.mp3" id="audio_perdendo"></audio>
+
+            <!-- SOM GANHANDO O GAME -->
+            <audio src="audio/aplausos.mp3" id="audio_ganhando"></audio>
+
+            <!--(FIM) audios do game -->
+        </section>
+        
+        <!-- TELA 1---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela inicial do game-->
+        <section id="tela_inicial" class="section_forca"> 
+            
+            <!-- forca-->
+            <div class="forca">
+                <!-- foto da forca (Pagina inicial) -->
+                <div class="img_tela_inicial">
+                    <img src="fotos/gif_vidas.gif" class="img_forca" alt="Imagem do jogo da forca">    
+                </div>
+
+            </div>
+            
+            <div class="button_tela inicial">
+            
+                
+                <!-- Botões "iniciar" e "como jogar?"-->
+                <div class="btn_iniciar_comoJogar">
+                    <h1 class="name_game">Jogo da Forca</h1>
+                    <div>
+                        <button class="btn" onclick="game(2); btn_som();">Iniciar</button>
+                        <button class="btn" onclick="game(4); btn_som();">Como Jogar?</button>
+                    </div>
+                </div>
+            
+            </div>
+
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        
+        <!--TELA 2 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela da explicação do game -->
+        <section id="modo_jogo" class="section_forca">
+            <!-- Botão de "voltar" -->
+            <header class="header_voltar" onclick="game(1); btn_som();">
+                <button class="btn">Voltar</button>
+            </header>
+            <div class="escolha_modo">
+                <h2 class="sub">Escolha o modo de jogo</h2>
+                <div class="modos">
+
+                    <!-- botões referentes aos modos do game -->
+                    <button class="btn" onclick="modo_solo(); btn_som();">Um jogador</button>
+                    <button class="btn" onclick="game(3); btn_som();">Multijogador</button>
+
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        
+        <!-- TELA 3---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela onde será coletada a palavra do game -->
+        <section id="coletor_palavra" class="section_forca">
+            
+            
+            <!-- Botão de "voltar" -->
+            <header class="header_voltar" onclick="game(2); btn_som();">
+                <button class="btn">Voltar</button>
+            </header>
+            
+            <!-- barra de coleta da palavra e da dica ou tema da palavra escolhida -->
+            <div class="tema_palavra">
+                <div class="sub_tit_temaEpalavra">
+                    <h2 class="sub">Informe a palavra</h2>
+                </div>
+                <div class="palavra">
+                    <input type="text" id="palavra" class="input_coletor" placeholder="Digite a palavra " required>
+                    <div id="alert1">!</div>
+                </div>
+                <div class="tema">
+                    <input type="text" id="tema" class="input_coletor " placeholder="Digite o tema ou uma dica para palavra" required>
+                    <div id="alert2">!</div>
+                </div>
+                
+            </div>
+            
+            <!-- Botão de "Enviar" palavra e tema -->
+            <footer class="footer_coletor">
+                <button class="btn" onclick="game(5); btn_som();">Enviar</button>
+            </footer>
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        
+
+
+        <!--TELA 4 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela da explicação do game -->
+        <section id="como_funciona" class="section_forca">
+            <header class="header_voltar" onclick="game(1); btn_som();">
+                <button class="btn">Voltar</button>
+            </header>
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        
+
+        <!-- TELA 5 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela do game em si -->
+        <section id="game" class="section_forca">
+            
+            <header class="header_game">
+                <!-- botão para sair para tela inicial -->
+                <div id="sair" onclick="saida(null, false); btn_som();"><ion-icon name="home"></ion-icon></div>
+                <!-- tela para confirma a saida para tela inicial -->
+                <div id="confirmacao_saida">
+                    <div class="confirmacao_saida_aux">
+                        <h2 class="sub">Realmente deseja sair para tela inicial?</h2>
+                    
+                        <div>
+                            <button class="btn" id="btn_confirmar" onclick="saida(true); btn_som();">Sim</button>
+                            <button class="btn" id="btn_cancelar" onclick="saida(false); btn_som();">Não</button>
+                        </div>    
+                    </div>
+                </div>
+            </header>
+
+            
+            
+            <!-- forca-->
+            <div class="forca desfoque_1"> 
+                <div class="img_tela_inicial " id="img_forca_game">
+                    
+                    <img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" id="ft_7">
+                         
+                    
+                </div>
+
+                <!-- botão para disponibilizar a dica ou o tema -->
+                <label id="dica_tema" for="dica_check" onclick="btn_som();"><ion-icon name="bulb"></ion-icon></label>
+                <input type="checkbox" id="dica_check">
+                <!-- div que irá aparecer a dica ou o tema -->
+                
+                <div id="dica_tema_txt"><ion-icon name="caret-up-outline" id="seta"></ion-icon></div>
+                
+            </div>
+            
+            <!-- parte onde ira aparecer o teclado e a palavra oculta -->
+            <div class="teclado_palavraOculta desfoque_2">
+                <!-- parte onde a palavra oculta aparecerá -->
+                <div id="palavraOculta"></div>
+
+                <!-- teclado -->
+                <div id="teclado" class="desfoque_3">
+                    <div class="teclas t1">
+                        <div class="tecla" onclick="teclado_palavraOculta('a', 1);" id="tecla_1">A</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('b', 2);" id="tecla_2">B</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('c', 3);" id="tecla_3">C</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('d', 4);" id="tecla_4">d</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('e', 5);" id="tecla_5">e</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('f', 6);" id="tecla_6">F</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('g', 7);" id="tecla_7">G</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('h', 8);" id="tecla_8">H</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('i', 9);" id="tecla_9">I</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('j', 10);" id="tecla_10">J</div>
+                    </div>
+                    <div class="teclas t2">
+                        <div class="tecla" onclick="teclado_palavraOculta('k', 11);" id="tecla_11">K</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('l', 12);" id="tecla_12">L</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('m', 13);" id="tecla_13">M</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('n', 14);" id="tecla_14">N</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('o', 15);" id="tecla_15">O</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('p', 16);" id="tecla_16">P</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('q', 17);" id="tecla_17">Q</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('r', 18);" id="tecla_18">R</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('s', 19);" id="tecla_19">S</div>
+                    </div>
+                    <div class="teclas t3">
+                        <div class="tecla" onclick="teclado_palavraOculta('t', 20);" id="tecla_20">T</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('u', 21);" id="tecla_21">U</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('v', 22);" id="tecla_22">V</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('w', 23);" id="tecla_23">W</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('x', 24);" id="tecla_24">X</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('y', 25);" id="tecla_25">Y</div>
+                        <div class="tecla" onclick="teclado_palavraOculta('z', 26);" id="tecla_26">Z</div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        <!-- TELA 6---------------------------------------------------------------------------------------------------- -->
+        <!-- tela do jogar novamente -->
+        <section id="fim_game" class="section_forca">
+           
+            <div class="fim_txt">
+                <h2 class="p_fim_game sub" id="fim_h2">game over</h2>
+            </div>
+           
+            <!-- Botão para "Jogar novamente" -->
+            <button id="fim" class="btn" onclick="game(2); btn_som();">Jogar novamente</button>
+        
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        
+    </main>
+
+    <!-- rodapé do site -->
+    <footer id="rodape_site">
+       
+        <div class="logo">
+            Jogo da Forca
+        </div>
+        
+        <div class="devs">
+            <h3>Dev - Leonardo S. Souza</h3> 
+        </div>
+        <div class="direitos">
+            <h3>©Todos os direitos reservados </h3>
+        </div>
+
+    </footer>
+</body>
+</html>
