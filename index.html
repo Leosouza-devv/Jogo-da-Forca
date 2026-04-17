@@ -87,7 +87,7 @@
                 <div class="modos">
 
                     <!-- botões referentes aos modos do game -->
-                    <button class="btn" onclick="modo_solo(); btn_som();">Um jogador</button>
+                    <button class="btn" onclick="game(5); btn_som();">Um jogador</button>
                     <button class="btn" onclick="game(3); btn_som();">Multijogador</button>
 
                 </div>
@@ -123,7 +123,7 @@
             
             <!-- Botão de "Enviar" palavra e tema -->
             <footer class="footer_coletor">
-                <button class="btn" onclick="game(5); btn_som();">Enviar</button>
+                <button class="btn" onclick="game(6); btn_som();">Enviar</button>
             </footer>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
@@ -139,8 +139,34 @@
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
         
-
         <!-- TELA 5 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela para escolhas do modo de jogo -->
+        
+        <section id="modo_jogo" class="section_forca">
+            <header class="header_voltar" onclick="game(1); btn_som();">
+                <button class="btn">Voltar</button>
+            </header>
+            <div class="escolha_modo">
+                <h2 class="sub">Escolha o modo de jogo</h2>
+                <div class="modos">
+
+                    <!-- botões referentes aos modos do game -->
+                    <button class="btn" onclick="modo_jogo(1); btn_som();">Aleatório</button>
+                    <button class="btn" onclick="modo_jogo(2); btn_som();">História do Brasil</button>
+                    <button class="btn" onclick="modo_jogo(3); btn_som();">Geografia</button>
+                    <button class="btn" onclick="modo_jogo(4); btn_som();">Geopolítica</button>
+                    <button class="btn" onclick="modo_jogo(5); btn_som();"></button>
+                    <button class="btn" onclick="modo_jogo(6); btn_som();"></button>
+
+                </div>
+            </div>
+        </section>
+        
+        
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- TELA 6 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela do game em si -->
         <section id="game" class="section_forca">
             
@@ -227,7 +253,7 @@
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
 
-        <!-- TELA 6---------------------------------------------------------------------------------------------------- -->
+        <!-- TELA 7---------------------------------------------------------------------------------------------------- -->
         <!-- tela do jogar novamente -->
         <section id="fim_game" class="section_forca">
            

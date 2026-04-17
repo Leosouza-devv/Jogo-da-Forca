@@ -86,7 +86,11 @@ function game(tela_ativa, frase_fim_game, palavra_md_solo, tema_md_solo) {
         rodape.style.position = 'relative';
     }
 
-    if (tela_ativa == 5) {// tela do game em si (5)
+    if(tela_ativa == 5){
+
+    }
+
+    if (tela_ativa == 6) {// tela do game em si (5)
 
         let palavra = document.getElementById('palavra').value;
         palavra = palavra.toUpperCase();
@@ -382,6 +386,53 @@ function btn_som(){
 
 
 //(FIM) FUNÇÕES REFERENTES AOS DETALHES SONOROS DO GAME 
+
+
+// função responsavel por escolher o modo de jogo 
+
+function modo_jogo(modo){
+
+    switch (modo){
+        
+        // modo aleatório
+        case 1: 
+
+        break;
+        
+        // modo história do brasil 
+        case 2: 
+
+        break;
+        
+        // modo geografia 
+        case 3: 
+
+        break;
+        
+        // modo geopolitica
+        case 4: 
+
+        break;
+
+        // modo 
+        case 5: 
+
+        break;
+        
+        // modo  
+        case 6: 
+
+        break;
+        
+
+    }
+
+
+}
+
+
+
+
 //FUNÇÃO RESPONSAVEL POR RANDONIZAR A PALAVRA E A DICA PARA O MODO SOLO 
 
 function modo_solo(){
@@ -799,7 +850,7 @@ function modo_solo(){
     let ind_aleatorio = Math.floor(Math.random() * palavras_dicas.length); // aleatorizando o indice da matriz
     let array_palavra_aleatorio = palavras_dicas[ind_aleatorio];
     validador_modo_solo = true;
-    game(5,'',array_palavra_aleatorio[0], array_palavra_aleatorio[1]);
+    game(6,'',array_palavra_aleatorio[0], array_palavra_aleatorio[1]);
 }
 
 
