@@ -1,0 +1,132 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/*(INICIO) estilizando o jogo da memória */
+
+    section.jogo_memoria{
+        width: 100%;
+        min-height:100vh ;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        /* ---------------------------------------------------------------- */
+
+        & div{
+            width: 100%;
+            max-width: 1100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            /* ------------------------------------------------------ */
+
+            
+
+            & #jogo{
+                display: grid;
+                width: 40%;
+                padding: 30px;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                justify-items: center;
+                align-items: center;
+                gap: 20px;
+            
+
+                & div{
+                    background-color: var(--color_1);
+                    min-width: 60px;
+                    max-width: 100px;
+                    min-height: 60px;
+                    max-height:100px ;
+                    border-radius: 10px;
+                    transition: ease-in-out .2s;
+                    border: 2px solid var(--color_4);
+                    box-shadow: 0 0 3px var(--color_5);
+                    font-family: "Chakra Petch", sans-serif;
+                    font-weight: bold;
+                    font-size: 20px;
+                    /* ------------------------------------------------------------------------ */
+
+                    &.oculto{
+                        cursor: pointer;
+                        position: relative;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        background-size: 0;
+                        color: var(--color_4);
+
+                        &:hover{
+                            
+                            transform: scale(1.08);
+
+                        }
+                    }
+                    
+
+                }
+            }
+
+            & div.descoberto{
+                display: flex;
+                width: 100%;
+                max-width: 500px;
+                min-height:50px ;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 5px;
+                background-color: var(--color_4);
+                
+                
+                
+                & p{
+                    width: 100%;
+                    color: var(--color_1);
+                    padding: 10px;
+                    font-size: 20px;
+                    text-align: center;
+                    /* ------------------------------------------------ */
+
+                    & span{
+                        color: var(--color_3);
+                        font-size: 25px;
+                        padding: 0 10px;
+                        font-family: "Rokkitt", serif;
+
+                    }
+                }
+            }
+            
+            & .reiniciar{
+                width: 100%;
+                max-width: 500px;
+                min-height:5vh ;
+                height: 50px;
+                min-width: fit-content;
+
+                /* ------------------------------------------ */
+                & button{
+                    width: 100%;
+                    height: 100%;
+                    background-color: var(--color_2);
+                    padding: 7px;
+                    transition: ease-in-out .2s;
+                    border: 0;
+                    outline: 0;
+                    border-radius: 5px;
+                    font-size: 18px;
+                    color: var(--color_0);
+                    cursor: pointer;
+                    font-weight: bold;
+                    /* ---------------------------------------- */
+                    &:hover{
+                        transform: scale(1.03);
+                    }
+                }
+            }
+
+        }
+    }

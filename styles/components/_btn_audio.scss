@@ -1,0 +1,28 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* estilizações do game */
+#btn_audio{
+    position: fixed;
+    right: 5%;
+    top: 5%;
+    font-size: 24px;
+    height: 50px;
+    max-width: 50px;
+    min-width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: variable.$cor_letra_branca;
+    padding: 12px;
+    background-color: variable.$cor_fundo_claro;
+    cursor: pointer;
+    border-radius: 100%;
+    transition: ease-in-out .2s;
+    z-index: 99;
+    &:hover{
+        transform: scale(1.15);
+        background-color: variable.$cor_buttom;
+    }
+    
+}

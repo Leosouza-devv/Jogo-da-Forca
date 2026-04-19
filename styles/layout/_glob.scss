@@ -1,0 +1,64 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+body{
+
+    overflow-x: hidden;
+    min-height: 100dvh;
+    width: 100vw;
+  
+    background-color: variable.$cor_fundo;
+
+    main{
+        min-width: 100vw;
+        max-width: 1440px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        section.section_forca {
+            width: 100%;
+            max-width: 1440px;
+            min-height: 90dvh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+            /* O display das telas é por padrão 'none' para ser atualizado no JS dependendo de qual tela você esteja, menos a tela 1. */
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4),
+            &:nth-child(5),
+            &:nth-child(6), 
+            &:nth-child(7), 
+            &:nth-child(8),
+            &:nth-child(9),
+            &:nth-child(10),
+            &:nth-child(11),
+            &:nth-child(12){
+                display: none;
+            }
+
+
+        }
+    }
+}
+
+
+@import 'footer';
+@import 'responsive';
+@import 'tela1_tela_inicial';
+@import 'tela2-5_modoJogo_categoria';
+@import 'tela3_coletor_palavras';
+// @import 'tela4_como_funciona_o_jogo';
+@import 'tela5_categoria_do_jogo';
+@import 'tela6_game_forca';
+@import 'tela6.1_confirmacao_para_saida';
+@import 'tela7_jogar_novamente';
+@import 'tela8_outros_games';
+@import 'tela9_jogo_da_velha';
+@import 'tela10_Jogo_do_numero_secreto';
+@import 'tela11_jogo_da_memoria';
+

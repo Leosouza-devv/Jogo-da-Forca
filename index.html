@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
     <title>Jogo da forca</title>
     <!-- codigo CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/output.css">
     <!-- codigo JavaScript -->
-    <script src="javascri.js" defer ></script>
-
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/jogo_da_memoria.js" defer></script>
+    <script src="scripts/jogo_do_numero_secreto" defer></script>
+    <script src="scripts/jogo_da_velha.js" defer></script>
     <!-- script referente aos icones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
@@ -16,9 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <main>
         <!--(INICIO) audios do game -->
@@ -26,7 +32,8 @@
             <!-- SOM DE FUNDO DO GAME -->
             <audio src="audio/lofi.mp3" loop id="audio_fundo"></audio>
             <div id="btn_audio" onclick="trilha(); btn_som();"><ion-icon name="volume-mute"></ion-icon></div>
-            
+
+
             <!-- SOM DOS BOTÕES DO GAME -->
             <audio src="audio/click.mp3" id="audio_click"></audio>
 
@@ -44,132 +51,382 @@
 
             <!--(FIM) audios do game -->
         </section>
-        
+
         <!-- TELA 1---------------------------------------------------------------------------------------------------- -->
         <!-- Tela inicial do game-->
-        <section id="tela_inicial" class="section_forca"> 
-            
+        <section id="tela_inicial" class="section_forca">
+
             <!-- forca-->
             <div class="forca">
                 <!-- foto da forca (Pagina inicial) -->
                 <div class="img_tela_inicial">
-                    <img src="fotos/gif_vidas.gif" class="img_forca" alt="Imagem do jogo da forca">    
+                    <img src="fotos/gif_vidas.gif" class="img_forca" alt="Imagem do jogo da forca">
                 </div>
 
             </div>
-            
+
             <div class="button_tela inicial">
-            
-                
+
+
                 <!-- Botões "iniciar" e "como jogar?"-->
                 <div class="btn_iniciar_comoJogar">
                     <h1 class="name_game">Jogo da Forca</h1>
-                    <div>
-                        <button class="btn" onclick="game(2); btn_som();">Iniciar</button>
-                        <button class="btn" onclick="game(4); btn_som();">Como Jogar?</button>
+                    <div class="btn_container">
+                        <button class="btn" onclick="game(2); btn_som();"><ion-icon name="play"></ion-icon>
+                            Iniciar</button>
+                        <button class="btn" onclick="game(4); btn_som();"><ion-icon name="document-text"></ion-icon>
+                            Como Jogar?</button>
+                        <!-- <button class="btn" onclick="game(8); btn_som();"><ion-icon name="extension-puzzle"></ion-icon>
+                            Outros games</button> -->
+
                     </div>
                 </div>
-            
+
             </div>
 
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        
+
         <!--TELA 2 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela da explicação do game -->
-        <section id="modo_jogo" class="section_forca">
+        <section id="modo_jogo" class="section_forca modoJogo_categoria">
             <!-- Botão de "voltar" -->
-            <header class="header_voltar" onclick="game(1); btn_som();">
-                <button class="btn">Voltar</button>
+            <header class="btn_voltar btn_container" >
+                <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon> Voltar</button>
             </header>
             <div class="escolha_modo">
                 <h2 class="sub">Escolha o modo de jogo</h2>
-                <div class="modos">
+                <div class="modos btn_container">
 
                     <!-- botões referentes aos modos do game -->
-                    <button class="btn" onclick="game(5); btn_som();">Um jogador</button>
-                    <button class="btn" onclick="game(3); btn_som();">Multijogador</button>
+                    <button class="btn" onclick="game(5); btn_som();"><ion-icon name="person"></ion-icon> Um
+                        jogador</button>
+                    <button class="btn" onclick="game(3); btn_som();"><ion-icon name="people"></ion-icon>
+                        Multijogador</button>
 
                 </div>
             </div>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        
+
         <!-- TELA 3---------------------------------------------------------------------------------------------------- -->
         <!-- Tela onde será coletada a palavra do game -->
         <section id="coletor_palavra" class="section_forca">
-            
-            
+
+
             <!-- Botão de "voltar" -->
-            <header class="header_voltar" onclick="game(2); btn_som();">
-                <button class="btn">Voltar</button>
+            <header class="btn_voltar btn_container" >
+                <button class="btn" onclick="game(2); btn_som();"><ion-icon name="arrow-undo"></ion-icon> Voltar</button>
             </header>
-            
+
             <!-- barra de coleta da palavra e da dica ou tema da palavra escolhida -->
             <div class="tema_palavra">
                 <div class="sub_tit_temaEpalavra">
                     <h2 class="sub">Informe a palavra</h2>
+                </div>
+                <div class="olho_container">
+                    <button id="olho" class="olho" onclick="toggle()" title="Mostrar/ocultar">
+                        <ion-icon name="eye"></ion-icon>
+                    </button>
                 </div>
                 <div class="palavra">
                     <input type="text" id="palavra" class="input_coletor" placeholder="Digite a palavra " required>
                     <div id="alert1">!</div>
                 </div>
                 <div class="tema">
-                    <input type="text" id="tema" class="input_coletor " placeholder="Digite o tema ou uma dica para palavra" required>
+                    <input type="text" id="tema" class="input_coletor "
+                        placeholder="Digite o tema ou uma dica para palavra" required>
                     <div id="alert2">!</div>
                 </div>
-                
+
             </div>
-            
+
             <!-- Botão de "Enviar" palavra e tema -->
-            <footer class="footer_coletor">
-                <button class="btn" onclick="game(6); btn_som();">Enviar</button>
+            <footer class="footer_coletor btn_container">
+                <button class="btn" onclick="game(6); btn_som();">Enviar <ion-icon
+                        name="arrow-redo"></ion-icon></button>
             </footer>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        
+
 
 
         <!--TELA 4 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela da explicação do game -->
-        <section id="como_funciona" class="section_forca">
-            <header class="header_voltar" onclick="game(1); btn_som();">
-                <button class="btn">Voltar</button>
+        <section id="como_funciona" class="section_forca btn_container">
+            <header class="btn_voltar btn_container" >
+                <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon> Voltar</button>
             </header>
+            <div>
+                <!-- HERO -->
+                <div class="hero">
+                    <div class="hero-badge">Guia do Jogador</div>
+                    <h2>Como <span>jogar</span> a Forca?</h2>
+                    <p>Aprenda as regras, conheça os modos de jogo e descubra como adivinhar a palavra certa antes que o
+                        boneco caia!</p>
+                </div>
+
+                <!-- SECTION: O QUE É -->
+                <div class="section">
+                    <div class="section-title">01 — O que é o jogo</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-num">?</div>
+                            <div class="step-body">
+                                <h3>O objetivo do jogo</h3>
+                                <p>Uma <strong>palavra secreta</strong> é escolhida e representada por traços em branco
+                                    — um traço para cada letra. Você deve descobrir a palavra <strong>antes de errar 7
+                                        letras</strong>. Cada erro desenha uma parte do boneco na forca.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: COMO FUNCIONA A PALAVRA -->
+                <div class="section">
+                    <div class="section-title">02 — A palavra oculta</div>
+                    <div class="word-demo" id="wordDemo">
+                        <!-- gerado pelo JS -->
+                    </div>
+                    <p class="interact-note">clique nas letras do teclado abaixo para ver como funciona ↓</p>
+                </div>
+
+                <!-- SECTION: TECLADO -->
+                <div class="section">
+                    <div class="section-title">03 — O teclado</div>
+                    <div class="keyboard-demo">
+                        <div id="keyboardDemo"></div>
+                        <div class="kb-legend">
+                            <div class="kb-legend-item">
+                                <div class="dot normal"></div> Não usada
+                            </div>
+                            <div class="kb-legend-item">
+                                <div class="dot hit"></div> Acertou
+                            </div>
+                            <div class="kb-legend-item">
+                                <div class="dot miss"></div> Errou
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: VIDAS -->
+                <div class="section">
+                    <div class="section-title">04 — As vidas</div>
+                    <div class="lives-demo">
+                        <div class="lives-row" id="livesRow"></div>
+                        <div class="lives-note">
+                            Você começa com <strong>7 vidas</strong>. A cada letra errada, perde uma vida e<br>
+                            o boneco ganha mais um pedaço. Quando as 7 acabam — <strong>game over!</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: DICA -->
+                <div class="section">
+                    <div class="section-title">05 — A dica</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-num">💡</div>
+                            <div class="step-body">
+                                <h3>Usando a dica ou tema</h3>
+                                <p>Durante o jogo há um botão de <strong>lâmpada</strong> (💡) que revela o tema ou uma
+                                    dica relacionada à palavra. Use com sabedoria — ela pode ser o empurrão que faltava
+                                    para descobrir a resposta!</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">🔤</div>
+                            <div class="step-body">
+                                <h3>Acentos e caracteres especiais</h3>
+                                <p>O jogo aceita letras com acento automaticamente. Por exemplo: ao pressionar
+                                    <code>A</code>, o sistema reconhece tanto <strong>A</strong> quanto <strong>Á, Â, Ã,
+                                        À</strong>. Você nunca precisa se preocupar com acentuação!</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">➖</div>
+                            <div class="step-body">
+                                <h3>Palavras compostas</h3>
+                                <p>Palavras com hífen ou espaço são exibidas com um <strong>traço visível</strong> entre
+                                    as partes. Esse traço não conta como letra — apenas indica que a palavra tem mais de
+                                    um elemento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: MODOS -->
+                <div class="section">
+                    <div class="section-title">06 — Modos de jogo</div>
+                    <div class="modes-grid">
+                        <div class="mode-card">
+                            <div class="mode-icon">👤</div>
+                            <h3>Um jogador</h3>
+                            <p>Escolha uma <strong>categoria</strong> — história, geografia, matemática, filosofia, TI,
+                                cibersegurança ou cultura pop — e o jogo sorteia automaticamente uma palavra do banco
+                                para você adivinhar.</p>
+                            <div class="mode-tag">Solo</div>
+                        </div>
+                        <div class="mode-card">
+                            <div class="mode-icon">👥</div>
+                            <h3>Multijogador</h3>
+                            <p>Um jogador <strong>digita a palavra e a dica</strong> em segredo (os campos ficam
+                                ocultos). Depois passa o dispositivo para o outro jogador tentar adivinhar. Diversão
+                                garantida com amigos!</p>
+                            <div class="mode-tag">Multiplayer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SECTION: CATEGORIAS -->
+                <div class="section">
+                    <div class="section-title">07 — Categorias disponíveis</div>
+                    <div class="cats-grid">
+                        <div class="cat"><span>🎲</span> Aleatório</div>
+                        <div class="cat"><span>📚</span> História</div>
+                        <div class="cat"><span>🗺️</span> Geografia</div>
+                        <div class="cat"><span>🌍</span> Geopolítica</div>
+                        <div class="cat"><span>🧮</span> Matemática</div>
+                        <div class="cat"><span>💡</span> Filosofia</div>
+                        <div class="cat"><span>💻</span> TI / Programação</div>
+                        <div class="cat"><span>🔒</span> Cibersegurança</div>
+                        <div class="cat"><span>🎬</span> Cultura Pop</div>
+                    </div>
+                </div>
+
+                <!-- SECTION: PASSO A PASSO -->
+                <div class="section">
+                    <div class="section-title">08 — Passo a passo</div>
+                    <div class="steps">
+                        <div class="step">
+                            <div class="step-num">1</div>
+                            <div class="step-body">
+                                <h3>Clique em "Iniciar"</h3>
+                                <p>Na tela inicial, pressione <strong>Iniciar</strong> para entrar no menu de modos de
+                                    jogo.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">2</div>
+                            <div class="step-body">
+                                <h3>Escolha o modo</h3>
+                                <p>Selecione <strong>Um jogador</strong> (sorteia uma palavra) ou
+                                    <strong>Multijogador</strong> (um jogador digita a palavra para o outro adivinhar).
+                                </p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">3</div>
+                            <div class="step-body">
+                                <h3>Escolha a categoria (modo solo)</h3>
+                                <p>No modo solo, escolha um dos <strong>9 temas</strong> disponíveis. O modo
+                                    <code>Aleatório</code> sorteia entre todas as categorias.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">4</div>
+                            <div class="step-body">
+                                <h3>Adivinhe a palavra</h3>
+                                <p>Clique nas <strong>letras do teclado</strong> para tentar adivinhar. Letras certas
+                                    aparecem reveladas em verde; letras erradas ficam marcadas em vermelho.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">5</div>
+                            <div class="step-body">
+                                <h3>Use a dica com inteligência</h3>
+                                <p>Se estiver travado, toque no ícone <strong>💡</strong> para revelar o tema ou uma
+                                    dica sobre a palavra.</p>
+                            </div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">6</div>
+                            <div class="step-body">
+                                <h3>Ganhe ou perca — jogue de novo!</h3>
+                                <p>Adivinhe todas as letras para <strong>vencer</strong>. Se errar 7 vezes, o boneco cai
+                                    e o jogo termina. Clique em <strong>Jogar novamente</strong> para uma nova rodada!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DICA EXTRA -->
+                <div class="section">
+                    <div class="section-title">09 — Dica extra</div>
+                    <div class="tip-box">
+                        <div class="tip-icon">🎵</div>
+                        <p>O jogo tem <strong>trilha sonora e efeitos de som</strong>! Use o botão de volume no canto
+                            superior direito para ativar a música de fundo e tornar a experiência ainda mais imersiva.
+                            Os sons mudam conforme você acerta, erra ou termina a partida.</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="cta">
+                    <h3>Pronto para jogar?</h3>
+                    <p>Você já sabe tudo que precisa. Agora é hora de testar seus conhecimentos!</p>
+                    <button class="btn-play" onclick="window.history.back()">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                        Começar a jogar
+                    </button>
+                </div>
+            </div>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
-        
+
         <!-- TELA 5 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela para escolhas do modo de jogo -->
-        
-        <section id="modo_jogo" class="section_forca">
-            <header class="header_voltar" onclick="game(1); btn_som();">
-                <button class="btn">Voltar</button>
+
+        <section id="categoria" class="section_forca modoJogo_categoria">
+            <!-- Botão de "voltar" -->
+            <header class="btn_voltar btn_container" >
+                <button class="btn" onclick="game(2); btn_som();"><ion-icon name="arrow-undo"></ion-icon> Voltar</button>
             </header>
             <div class="escolha_modo">
-                <h2 class="sub">Escolha o modo de jogo</h2>
-                <div class="modos">
+                <h2 class="sub">Escolha um tema para o seu jogo</h2>
+                <div class="modos btn_container">
 
-                    <!-- botões referentes aos modos do game -->
-                    <button class="btn" onclick="modo_jogo(1); btn_som();">Aleatório</button>
-                    <button class="btn" onclick="modo_jogo(2); btn_som();">História do Brasil</button>
-                    <button class="btn" onclick="modo_jogo(3); btn_som();">Geografia</button>
-                    <button class="btn" onclick="modo_jogo(4); btn_som();">Geopolítica</button>
-                    <button class="btn" onclick="modo_jogo(5); btn_som();"></button>
-                    <button class="btn" onclick="modo_jogo(6); btn_som();"></button>
+                    <!-- botões referentes as categorias das palavras do game -->
+                    <button class="btn" onclick="categoria_de_jogo(1); btn_som();"><ion-icon
+                            name="reload-circle"></ion-icon>
+                        Aleatório</button>
+                    <button class="btn" onclick="categoria_de_jogo(2); btn_som();"><ion-icon name="library"></ion-icon>
+                        História</button>
+                    <button class="btn" onclick="categoria_de_jogo(3); btn_som();"><ion-icon name="map"></ion-icon>
+                        Geografia</button>
+                    <button class="btn" onclick="categoria_de_jogo(4); btn_som();"><ion-icon name="earth"></ion-icon>
+                        Geopolítica</button>
+
+                    <button class="btn" onclick="categoria_de_jogo(5); btn_som();"><ion-icon
+                            name="calculator"></ion-icon> Matemática</button>
+                    <button class="btn" onclick="categoria_de_jogo(6); btn_som();"><ion-icon name="bulb"></ion-icon>
+                        Filosofia</button>
+                    <button class="btn" onclick="categoria_de_jogo(7); btn_som();"><ion-icon name="terminal"></ion-icon>
+                        TI/programação</button>
+                    <button class="btn" onclick="categoria_de_jogo(8); btn_som();"><ion-icon name="bug"></ion-icon>
+                        Cibersegurança</button>
+
+                    <button class="btn" onclick="categoria_de_jogo(9); btn_som();"><ion-icon name="film"></ion-icon>
+                        Cultura
+                        pop</button>
+
 
                 </div>
             </div>
         </section>
-        
-        
+
+
         <!-- ---------------------------------------------------------------------------------------------------- -->
 
 
         <!-- TELA 6 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela do game em si -->
         <section id="game" class="section_forca">
-            
+
             <header class="header_game">
                 <!-- botão para sair para tela inicial -->
                 <div id="sair" onclick="saida(null, false); btn_som();"><ion-icon name="home"></ion-icon></div>
@@ -177,35 +434,35 @@
                 <div id="confirmacao_saida">
                     <div class="confirmacao_saida_aux">
                         <h2 class="sub">Realmente deseja sair para tela inicial?</h2>
-                    
-                        <div>
+
+                        <div class="btn_container">
                             <button class="btn" id="btn_confirmar" onclick="saida(true); btn_som();">Sim</button>
                             <button class="btn" id="btn_cancelar" onclick="saida(false); btn_som();">Não</button>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </header>
 
-            
-            
+
+
             <!-- forca-->
-            <div class="forca desfoque_1"> 
+            <div class="forca desfoque_1">
                 <div class="img_tela_inicial " id="img_forca_game">
-                    
+
                     <img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" id="ft_7">
-                         
-                    
+
+
                 </div>
 
                 <!-- botão para disponibilizar a dica ou o tema -->
                 <label id="dica_tema" for="dica_check" onclick="btn_som();"><ion-icon name="bulb"></ion-icon></label>
                 <input type="checkbox" id="dica_check">
                 <!-- div que irá aparecer a dica ou o tema -->
-                
+
                 <div id="dica_tema_txt"><ion-icon name="caret-up-outline" id="seta"></ion-icon></div>
-                
+
             </div>
-            
+
             <!-- parte onde ira aparecer o teclado e a palavra oculta -->
             <div class="teclado_palavraOculta desfoque_2">
                 <!-- parte onde a palavra oculta aparecerá -->
@@ -256,34 +513,152 @@
         <!-- TELA 7---------------------------------------------------------------------------------------------------- -->
         <!-- tela do jogar novamente -->
         <section id="fim_game" class="section_forca">
-           
+
             <div class="fim_txt">
                 <h2 class="p_fim_game sub" id="fim_h2">game over</h2>
             </div>
-           
-            <!-- Botão para "Jogar novamente" -->
-            <button id="fim" class="btn" onclick="game(2); btn_som();">Jogar novamente</button>
-        
+
+            <div class="btn_container">
+                <!-- Botão para "Jogar novamente" -->
+                <button id="fim" class="btn" onclick="game(2); btn_som();"><ion-icon name="repeat"
+                        style="font-size: 32px;"></ion-icon> Jogar novamente</button>
+            </div>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
 
-        
+        <!-- TELA 8---------------------------------------------------------------------------------------------------- -->
+        <!-- tela do jogar novamente -->
+        <section id="outros_games" class="section_forca modoJogo_categoria">
+            <!-- Botão de "voltar" -->
+            <header class="btn_voltar btn_container" >
+                <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon> Voltar</button>
+            </header>
+            <div class="escolha_modo btn_container">
+                <h2 class="sub">Outros Games </h2>
+                <div class="modos btn_container">
+
+                    <!-- outros jogos -->
+                    <div class="outro_game">
+                        <img src="" alt="">
+                        <button class="btn" onclick="game(5); btn_som();"><ion-icon name="person"></ion-icon> Um
+                            jogador</button>
+                    </div>
+
+                    <button class="btn" onclick="game(3); btn_som();"><ion-icon name="people"></ion-icon>
+                        Multijogador</button>
+
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- TELA 9  ---------------------------------------------------------------------------------------------------- -->
+        <!-- Jogo da velha -->
+
+        <section id="jogo_da_velha" class="section_forca container_jogo">
+            <div class="jogo">
+                <!-- titulo do jogo da velha -->
+
+                <h1 class="titulo_game">Jogo da velha</h1>
+
+
+                <!-- jogo da velha -->
+                <div class="botoes_jogo">
+                    <button class="btn_game" onclick="game(1)" id="btn_1"
+                        style=" border-width: 0px 5px 5px 0px;"></button>
+                    <button class="btn_game" onclick="game(2)" id="btn_2"
+                        style=" border-width: 0px 5px 5px 5px;"></button>
+                    <button class="btn_game" onclick="game(3)" id="btn_3"
+                        style=" border-width: 0px 0px 5px 5px;"></button>
+                    <button class="btn_game" onclick="game(4)" id="btn_4"
+                        style=" border-width: 5px 5px 5px 0px;"></button>
+                    <button class="btn_game" onclick="game(5)" id="btn_5"
+                        style=" border-width: 5px 5px 5px 5px;"></button>
+                    <button class="btn_game" onclick="game(6)" id="btn_6"
+                        style=" border-width: 5px 0px 5px 5px;"></button>
+                    <button class="btn_game" onclick="game(7)" id="btn_7"
+                        style=" border-width: 5px 5px 0px 0px;"></button>
+                    <button class="btn_game" onclick="game(8)" id="btn_8"
+                        style=" border-width: 5px 5px 0px 5px;"></button>
+                    <button class="btn_game" onclick="game(9)" id="btn_9"
+                        style=" border-width: 5px 0px 0px 5px;"></button>
+                </div>
+                <!-- turno do jogo e ganhador -->
+                <div id="turno_ganhador">
+                    <p>Vez do jogador:<span>X</span></p>
+                </div>
+                <div class="reiniciar">
+                    <button onclick="reiniciar_game(true);" class="reiniciar_btn">Novo Jogo</button>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        <!-- TELA 10 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Jogo do numero secreto -->
+        <section id="Jogo_n_secreto" class=" section_forca Jogo_n_secreto">
+            <div>
+                <h1 class="titulo_game">Jogo do N° secreto</h1>
+
+                <div class="game">
+                    <input type="number" id="numero_imput" placeholder="">
+                    <button id="enviar_n_imput">Chutar</button>
+                </div>
+
+                <div class="parametros_do_game">
+                    <p id="parametro_n_secreto">Escolha um número de <span>1 a 100</span></p>
+                </div>
+
+                <div class="reiniciar">
+                    <button class="reiniciar_btn">Novo Jogo</button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+
+        <!-- TELA 11 ---------------------------------------------------------------------------------------------------- -->
+        <!-- Jogo da memória -->
+        <section id="jogo_da_memoria" class="jogo_memoria section_forca">
+            <div>
+                <h1 class="titulo_game">Jogo da memória</h1>
+                <div id="jogo">
+
+                </div>
+                <div class="descoberto" id="ponto">
+
+                </div>
+                <div class="reiniciar">
+                    <button class="reiniciar_btn">Novo Jogo</button>
+                </div>
+            </div>
+        </section>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+
+
     </main>
 
     <!-- rodapé do site -->
     <footer id="rodape_site">
-       
+
         <div class="logo">
             Jogo da Forca
         </div>
-        
+
         <div class="devs">
-            <h3>Dev - Leonardo S. Souza</h3> 
+            <h3>Dev. Leonardo S. Souza</h3>
         </div>
         <div class="direitos">
-            <h3>©Todos os direitos reservados </h3>
+            <h3>© <span id="ano_copy"></span>. Todos os direitos reservados.</h3>
         </div>
 
     </footer>
 </body>
+
 </html>

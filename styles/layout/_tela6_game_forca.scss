@@ -1,0 +1,207 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* estilizando a tela(6) do game */
+#game {
+    
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+    & div.forca {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        
+        /* estilizando botão da dica e do tema */
+        & label#dica_tema{
+            font-size: 24px;
+            min-width: 50px;
+            height: 50px;
+            max-width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: variable.$cor_letra_branca;
+            padding: 12px;
+            margin-bottom: 15px;
+            background-color: variable.$cor_fundo_claro;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: ease-in-out .2s;
+            &:hover{
+                transform: scale(1.15);
+                background-color: variable.$cor_buttom;
+
+            }
+            
+
+
+        }
+        
+        & input#dica_check{
+            display: none;
+
+            &:checked ~ & label#dica_tema{
+                background-color: variable.$cor_buttom;
+            }
+        }
+        
+        /* estilizando container que irá conter a dica ou o tema  */
+        & div#dica_tema_txt{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: variable.$cor_buttom;
+            min-width: 200px;
+            width: fit-content;
+            height: 70px;
+            padding: 5px 10px;
+            border-radius: 15px;
+            position: relative;
+            margin: 10px;
+            transition: ease-in-out .2s;
+            opacity: 0;
+            
+
+            & #seta{
+                font-size: 55px;
+                position: absolute;
+                top: -45%;
+                color: variable.$cor_buttom;
+            }
+
+            & p{
+                color: variable.$cor_letra_branca;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            
+        }
+
+        & #img_forca_game{
+            min-width: 350px;
+            min-height: 350px;
+            & .img_forca {
+                padding: 20px;
+                border-radius: 30px;
+                animation: fadeIn 1.5s ease-in-out 0s forwards; /* Adicionando a animação */
+            }
+        }
+        
+
+        
+        
+    }
+
+
+    & div.teclado_palavraOculta {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap:40px;
+
+        /* estilizando palavra oculta */
+        & #palavraOculta{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            
+            & div{
+                min-width: 30px;
+                font-size: 25px;
+                text-transform: uppercase;
+                font-weight: bold;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: var(--letra_forca_js);/*esta cor ira ser trabalhada no js posteriormente*/
+                background-color:#808fa611 ;
+                border-bottom: solid 3px variable.$cor_letra_branca;
+                border-radius: 5px;
+                & p{
+                    padding: 10px 18px;
+                }
+            
+            }
+        }
+        /* estilizando teclado do game */
+        & #teclado {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 7px;
+            padding: 10px;
+            overflow: hidden;
+            
+            
+
+            & .t1 {
+                display: grid;
+                grid-template-columns: repeat(10, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+
+            }
+
+            & .t2 {
+                display: grid;
+                grid-template-columns: repeat(9, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+
+            & .t3 {
+                display: grid;
+                grid-template-columns: repeat(7, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+
+            }
+            
+            & div{
+                display: flex;
+                flex-grow: 1;
+
+            }
+
+            & div .tecla {
+                
+                width: 100%;
+                height: 100%;
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                line-height: 40px;
+                background-color: variable.$cor_fundo_claro;
+                color: variable.$cor_letra_branca;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: ease-in-out .1s;
+                justify-self: center;
+
+                &:hover {
+                    transform: scale(1.12);
+                    background-color: #545559;
+
+                }
+
+                
+            }
+
+
+        }
+    }
+}

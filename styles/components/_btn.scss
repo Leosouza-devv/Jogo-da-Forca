@@ -1,0 +1,38 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/*estilizando botões do game  */
+.btn_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .btn {
+        max-width: fit-content;
+        min-width: 150px;
+        min-height: fit-content;
+        max-height: fit-content;
+        padding: 12px;
+        background-color: variable.$cor_buttom;
+        font-size: 27px;
+        font-weight: bold;
+        border: 3px rgba(0, 0, 0, 0.226) solid;
+        border-radius: 20px;
+        color: variable.$cor_letra_branca;
+        cursor: pointer;
+        margin: 10px;
+        transition: ease-in-out .2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        
+
+        &:hover {
+            transform: scale(1.1);
+            background-color: variable.$cor_buttom_hover;
+        }
+
+    }
+
+}

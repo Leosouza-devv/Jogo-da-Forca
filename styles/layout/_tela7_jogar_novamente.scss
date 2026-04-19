@@ -1,0 +1,33 @@
+
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* estilizando a tela(7) fim do game/jogar novamente  */
+#fim_game {
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+
+    & div.fim_txt {
+        color: variable.$cor_letra_branca;
+        font-family: variable.$font_gameficada;
+        font-size: 40px;
+        text-align: center;
+
+        & span{
+            font-family: variable.$font_padrao;
+            font-size: 60%;
+            color: variable.$cor_buttom_hover;
+
+        }
+
+
+    }
+
+    & button {
+        padding: 10px;
+    }
+
+}

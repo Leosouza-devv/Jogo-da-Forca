@@ -1,0 +1,25 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+html::after,
+html::before {
+    font-size: 1.6rem;
+    font-family: variable.$font_padrao;
+
+}
+
+body,
+body::after,
+body::before {
+    font-size: 60.5%;
+}

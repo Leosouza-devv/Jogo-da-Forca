@@ -1,0 +1,63 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* Estilizando tela(1) pagina inicial*/
+#tela_inicial {
+
+    display: flex;
+    /*este é de padrão flex por se tratar da pagina 1*/
+    justify-content: center;
+}
+
+.forca {
+    min-width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & img {
+            min-width: 10px;
+            width: 400px;
+            border-radius: 12px;
+        }
+
+    }
+}
+
+
+.inicial {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.btn_iniciar_comoJogar {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+
+    & h1 {
+        font-size: 55px;
+        font-family: variable.$font_gameficada;
+        font-weight: bold;
+        text-align: center;
+        color: variable.$cor_letra_branca;
+
+    }
+
+
+}

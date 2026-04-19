@@ -1,0 +1,1714 @@
+@charset "UTF-8";
+/*IMPORTAÇÕES*/
+/* Animações [todas as animações]  */
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Começa invisível */
+  }
+  to {
+    opacity: 1; /* Fica completamente visível */
+  }
+}
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html,
+html::after,
+html::before {
+  font-size: 1.6rem;
+  font-family: "Fira Sans", sans-serif;
+}
+
+body,
+body::after,
+body::before {
+  font-size: 60.5%;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* estilizações do game */
+#btn_audio {
+  position: fixed;
+  right: 5%;
+  top: 5%;
+  font-size: 24px;
+  height: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 12px;
+  background-color: #3c3d41;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: ease-in-out 0.2s;
+  z-index: 99;
+}
+#btn_audio:hover {
+  transform: scale(1.15);
+  background-color: #038764;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/*estilizando botões do game  */
+.btn_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.btn_container .btn {
+  max-width: fit-content;
+  min-width: 150px;
+  min-height: fit-content;
+  max-height: fit-content;
+  padding: 12px;
+  background-color: #038764;
+  font-size: 27px;
+  font-weight: bold;
+  border: 3px rgba(0, 0, 0, 0.226) solid;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  margin: 10px;
+  transition: ease-in-out 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn_container .btn:hover {
+  transform: scale(1.1);
+  background-color: #09ab80;
+}
+
+header.btn_voltar {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+  margin: 10px;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+div.olho_container {
+  width: 100%;
+  height: 5dvh;
+  display: flex;
+}
+div.olho_container .olho {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: rgb(40, 40, 44);
+  border: 0;
+  cursor: pointer;
+}
+div.olho_container .olho ion-icon {
+  font-size: 50px;
+  color: #AFB6BB;
+  transition: ease-in-out transform 0.2s;
+}
+div.olho_container .olho:hover > ion-icon {
+  transform: scale(1.1);
+  color: #fff;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+body {
+  overflow-x: hidden;
+  min-height: 100dvh;
+  width: 100vw;
+  background-color: rgb(40, 40, 44);
+}
+body main {
+  min-width: 100vw;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body main section.section_forca {
+  width: 100%;
+  max-width: 1440px;
+  min-height: 90dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  /* O display das telas é por padrão 'none' para ser atualizado no JS dependendo de qual tela você esteja, menos a tela 1. */
+}
+body main section.section_forca:nth-child(2), body main section.section_forca:nth-child(3), body main section.section_forca:nth-child(4), body main section.section_forca:nth-child(5), body main section.section_forca:nth-child(6), body main section.section_forca:nth-child(7), body main section.section_forca:nth-child(8), body main section.section_forca:nth-child(9), body main section.section_forca:nth-child(10), body main section.section_forca:nth-child(11), body main section.section_forca:nth-child(12) {
+  display: none;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/*(INICIO) estilizando rodapé do site */
+footer#rodape_site {
+  width: 100%;
+  min-height: 10vh;
+  background-color: #3c3d41;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+  bottom: 0px;
+}
+@media (max-width: 1050px) {
+  footer#rodape_site {
+    position: relative;
+  }
+}
+footer#rodape_site div {
+  margin: 15px 50px;
+}
+footer#rodape_site div.logo {
+  font-size: 30px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer#rodape_site div.devs {
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #AFB6BB;
+}
+footer#rodape_site div.direitos {
+  font-size: 15px;
+  color: #11be90;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* Estilização para mobile [todas as telas] */
+/* Tela 1,2, 3 e 6*/
+@media (min-width: 1250px) {
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game {
+    flex-wrap: nowrap;
+  }
+  #game .forca {
+    min-width: 50%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 500px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
+    gap: 7px;
+  }
+  #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 60px;
+    max-height: 60px;
+  }
+}
+@media (min-width: 1050px) {
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 50%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 350px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
+    gap: 7px;
+  }
+  #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
+    min-width: 60px;
+    min-height: 60px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+}
+@media (max-width: 1050px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 45%;
+    height: 100vh;
+  }
+  #tela_inicial .forca .img_forca {
+    width: 350px;
+  }
+  #tela_inicial .inicial {
+    padding: 1px;
+    width: 55%;
+    height: 100vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 100%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 350px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
+    gap: 7px;
+  }
+  #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
+    min-width: 55px;
+    min-height: 55px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 40px;
+  }
+  h2.sub {
+    font-size: 35px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+}
+@media (max-width: 800px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 50%;
+    height: 100vh;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 300px;
+  }
+  #tela_inicial .inicial {
+    width: 50%;
+    height: 100vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 70%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 350px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas div.tecla {
+    min-width: 55px;
+    min-height: 55px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 33px;
+  }
+  h2.sub {
+    font-size: 35px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+}
+@media (max-width: 700px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 100%;
+    height: 60vh;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 600px;
+  }
+  #tela_inicial .inicial {
+    width: 100%;
+    height: 40vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 40%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 300px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas div.tecla {
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 35px;
+  }
+  h2.sub {
+    font-size: 35px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+}
+@media (max-width: 640px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 100%;
+    height: 60vh;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 500px;
+  }
+  #tela_inicial .inicial {
+    width: 100%;
+    height: 40vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 50%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 300px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas div.tecla {
+    min-width: 45px;
+    min-height: 45px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 35px;
+  }
+  h2.sub {
+    font-size: 30px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+}
+@media (max-width: 560px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 100%;
+    height: 60vh;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 500px;
+  }
+  #tela_inicial .inicial {
+    width: 100%;
+    height: 40vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 70%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 300px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas div.tecla {
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 90%;
+    max-height: 90%;
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 35px;
+  }
+  h2.sub {
+    font-size: 30px;
+  }
+  .btn {
+    font-size: 25px;
+  }
+}
+@media (max-width: 480px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 100%;
+    height: 60vh;
+    margin: 0;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 300px;
+  }
+  #tela_inicial .inicial {
+    width: 100%;
+    height: 40vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 70%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 350px;
+  }
+  #game div {
+    min-width: 50%;
+    height: auto;
+  }
+  #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
+    gap: 2px;
+  }
+  #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
+    min-width: 10px;
+    min-height: 10px;
+    padding: 5px 12px;
+  }
+  #game div.palavraOculta div {
+    transform: scale(0.6);
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 30px;
+  }
+  h2.sub {
+    font-size: 30px;
+  }
+  .btn {
+    font-size: 20px;
+  }
+}
+@media (max-width: 400px) {
+  /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+  #tela_inicial .forca {
+    min-width: 100%;
+    height: 50vh;
+  }
+  #tela_inicial .forca .img_forca {
+    max-width: 250px;
+  }
+  #tela_inicial .inicial {
+    padding: 1px;
+    width: 100%;
+    height: 50vh;
+  }
+  /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+  #game .forca {
+    min-width: 70%;
+    height: auto;
+  }
+  #game .forca .img_forca {
+    width: 300px;
+  }
+  #game div {
+    min-width: 100%;
+    height: auto;
+  }
+  #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
+    max-width: 100%;
+    max-height: 50px;
+    padding: 15px 10px;
+  }
+  #game div.palavraOculta div.P_O {
+    transform: scale(0.3);
+  }
+  /* estilização geral [todas as paginas]*/
+  h1.name_game {
+    font-size: 27px;
+  }
+  h2.sub {
+    font-size: 25px;
+  }
+  .btn {
+    font-size: 18px;
+  }
+}
+/* (FIM) Estilização mobile [todas as telas] */
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* Estilizando tela(1) pagina inicial*/
+#tela_inicial {
+  display: flex;
+  /*este é de padrão flex por se tratar da pagina 1*/
+  justify-content: center;
+}
+
+.forca {
+  min-width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forca div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.forca div img {
+  min-width: 10px;
+  width: 400px;
+  border-radius: 12px;
+}
+
+.inicial {
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_iniciar_comoJogar {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.btn_iniciar_comoJogar h1 {
+  font-size: 55px;
+  font-family: "Silkscreen", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* estilizando tela(2) que define o modo de jogo --sozinho ou em grupo--  */
+.modoJogo_categoria {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  position: relative;
+}
+.modoJogo_categoria footer {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  margin: 10px;
+}
+.modoJogo_categoria div.escolha_modo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1440px;
+  text-align: left;
+  gap: 50px;
+}
+.modoJogo_categoria div.escolha_modo div.modos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.modoJogo_categoria div.escolha_modo h2 {
+  font-size: 40px;
+  font-family: "Silkscreen", sans-serif;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  .modoJogo_categoria div.escolha_modo h2 {
+    font-size: 30px;
+  }
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* estilizando tela(3) de coleta de palavras */
+#coletor_palavra {
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  /* (INICIO)estilizando elementos que pertencem a section #coletor_palavras  */
+}
+#coletor_palavra footer {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  margin: 10px;
+}
+#coletor_palavra div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  gap: 50px;
+}
+#coletor_palavra {
+  /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
+  /* (INICIO) estilizando os inputs que recebe a palavra e as dicas */
+}
+#coletor_palavra div.tema_palavra {
+  width: 55%;
+  min-width: 300px;
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* estilizando o alerta caso o texto não for mensionado */
+}
+#coletor_palavra div.tema_palavra .palavra, #coletor_palavra div.tema_palavra .tema {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  transition: ease-in-out 0.2s;
+  /* estilizando sinal de alerta */
+}
+#coletor_palavra div.tema_palavra .palavra div, #coletor_palavra div.tema_palavra .tema div {
+  right: 0;
+  transition: ease-in-out 0.2s;
+  display: none;
+  width: 50px;
+  height: 50px;
+  font-size: 40px;
+  border-radius: 15px;
+  background-color: var(--buttom_js); /*esta cor ira ser trabalhada no js posteriormente*/
+  color: #fff;
+}
+#coletor_palavra .sub_tit_temaEpalavra {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+#coletor_palavra input.input_coletor {
+  width: 80%;
+  min-width: 200px;
+  max-width: 100%;
+  min-height: 5vh;
+  max-height: fit-content;
+  border-radius: 20px;
+  outline: none;
+  border: solid 6px var(--buttom_js); /*esta cor ira ser trabalhada no js posteriormente*/
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5%;
+  color: #252528;
+  font-weight: bold;
+  transition: ease-in-out 0.2s;
+  /* estilizando o placeholder do input */
+}
+#coletor_palavra input.input_coletor::placeholder {
+  font-size: 20px;
+  position: absolute;
+  left: 2.5%;
+  font-weight: bold;
+  color: #AFB6BB;
+}
+#coletor_palavra input.input_coletor {
+  /* estilizando o input ativado */
+}
+#coletor_palavra input.input_coletor:focus {
+  transform: scale(1.05);
+}
+#coletor_palavra {
+  /* (FIM) estilizando os inputs que recebe a palavra e as dicas */
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* estilizando a tela(6) do game */
+#game {
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+#game div.forca {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* estilizando botão da dica e do tema */
+}
+#game div.forca label#dica_tema {
+  font-size: 24px;
+  min-width: 50px;
+  height: 50px;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 12px;
+  margin-bottom: 15px;
+  background-color: #3c3d41;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: ease-in-out 0.2s;
+}
+#game div.forca label#dica_tema:hover {
+  transform: scale(1.15);
+  background-color: #038764;
+}
+#game div.forca input#dica_check {
+  display: none;
+}
+#game div.forca input#dica_check:checked ~ #game div.forca input#dica_check label#dica_tema {
+  background-color: #038764;
+}
+#game div.forca {
+  /* estilizando container que irá conter a dica ou o tema  */
+}
+#game div.forca div#dica_tema_txt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #038764;
+  min-width: 200px;
+  width: fit-content;
+  height: 70px;
+  padding: 5px 10px;
+  border-radius: 15px;
+  position: relative;
+  margin: 10px;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+}
+#game div.forca div#dica_tema_txt #seta {
+  font-size: 55px;
+  position: absolute;
+  top: -45%;
+  color: #038764;
+}
+#game div.forca div#dica_tema_txt p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+#game div.forca #img_forca_game {
+  min-width: 350px;
+  min-height: 350px;
+}
+#game div.forca #img_forca_game .img_forca {
+  padding: 20px;
+  border-radius: 30px;
+  animation: fadeIn 1.5s ease-in-out 0s forwards; /* Adicionando a animação */
+}
+#game div.teclado_palavraOculta {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* estilizando palavra oculta */
+}
+#game div.teclado_palavraOculta #palavraOculta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+#game div.teclado_palavraOculta #palavraOculta div {
+  min-width: 30px;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--letra_forca_js); /*esta cor ira ser trabalhada no js posteriormente*/
+  background-color: rgba(128, 143, 166, 0.0666666667);
+  border-bottom: solid 3px #fff;
+  border-radius: 5px;
+}
+#game div.teclado_palavraOculta #palavraOculta div p {
+  padding: 10px 18px;
+}
+#game div.teclado_palavraOculta {
+  /* estilizando teclado do game */
+}
+#game div.teclado_palavraOculta #teclado {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  padding: 10px;
+  overflow: hidden;
+}
+#game div.teclado_palavraOculta #teclado .t1 {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+#game div.teclado_palavraOculta #teclado .t2 {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+#game div.teclado_palavraOculta #teclado .t3 {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+}
+#game div.teclado_palavraOculta #teclado div {
+  display: flex;
+  flex-grow: 1;
+}
+#game div.teclado_palavraOculta #teclado div .tecla {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  background-color: #3c3d41;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: ease-in-out 0.1s;
+  justify-self: center;
+}
+#game div.teclado_palavraOculta #teclado div .tecla:hover {
+  transform: scale(1.12);
+  background-color: #545559;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+div#sair {
+  position: absolute;
+  left: 5%;
+  top: 5%;
+  font-size: 24px;
+  height: 50px;
+  max-width: 50px;
+  min-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 12px;
+  background-color: #3c3d41;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: ease-in-out 0.2s;
+}
+div#sair:hover {
+  transform: scale(1.15);
+  background-color: #038764;
+  color: var();
+}
+div {
+  /* estilizando parte da confirmação para saida da tela do game */
+}
+div#confirmacao_saida {
+  background-color: rgba(37, 37, 40, 0.8549019608);
+  min-width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+div#confirmacao_saida .confirmacao_saida_aux {
+  background-color: #3c3d41;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  z-index: 1;
+  gap: 30px;
+}
+div#confirmacao_saida .confirmacao_saida_aux div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+div#confirmacao_saida .confirmacao_saida_aux h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  margin: 10px;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* estilizando a tela(7) fim do game/jogar novamente  */
+#fim_game {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#fim_game div.fim_txt {
+  color: #fff;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 40px;
+  text-align: center;
+}
+#fim_game div.fim_txt span {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 60%;
+  color: #09ab80;
+}
+#fim_game button {
+  padding: 10px;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/*(INICIO) Estilizações do jogo da velha */
+section.container_jogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  /* -------------------------------------------------- */
+}
+section.container_jogo .jogo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 70%;
+  max-width: 1100px;
+  min-height: 90%;
+  /* --------------------------------------------- */
+}
+section.container_jogo .jogo .botoes_jogo {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  justify-content: center;
+  padding: 30px;
+  /* ------------------------------------------- */
+}
+section.container_jogo .jogo .botoes_jogo button {
+  border: solid var(--color_5);
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 60px;
+  font-family: "Rokkitt", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: var(--color_5);
+}
+section.container_jogo .jogo #turno_ganhador {
+  width: 100%;
+  max-width: 500px;
+  min-height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color_4);
+}
+section.container_jogo .jogo #turno_ganhador p {
+  width: 100%;
+  color: var(--color_1);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  /* ------------------------------------------------ */
+}
+section.container_jogo .jogo #turno_ganhador p span {
+  color: var(--color_3);
+  font-size: 25px;
+  padding: 0 10px;
+  font-family: "Rokkitt", serif;
+}
+section.container_jogo .jogo .reiniciar {
+  width: 100%;
+  max-width: 500px;
+  min-height: 5vh;
+  height: 50px;
+  min-width: fit-content;
+  /* ------------------------------------------ */
+}
+section.container_jogo .jogo .reiniciar button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color_2);
+  padding: 7px;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--color_0);
+  cursor: pointer;
+  font-weight: bold;
+  /* ---------------------------------------- */
+}
+section.container_jogo .jogo .reiniciar button:hover {
+  transform: scale(1.03);
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/*(INICIO) Estilizações do jogo da velha */
+section.Jogo_n_secreto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+}
+section.Jogo_n_secreto div {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* ------------------------------------------------------ */
+}
+section.Jogo_n_secreto div div.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  /* ------------------------------------------------ */
+}
+section.Jogo_n_secreto div div.game input {
+  width: 50%;
+  max-width: 240px;
+  min-height: 50px;
+  border: solid 3px var(--color_4);
+  background-color: var(--color_1);
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 10px;
+}
+section.Jogo_n_secreto div div.game button {
+  width: 100%;
+  max-width: 240px;
+  min-height: 50px;
+  background-color: var(--color_2);
+  padding: 7px;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--color_0);
+  cursor: pointer;
+  font-weight: bold;
+  /* ---------------------------------------- */
+}
+section.Jogo_n_secreto div div.game button:hover {
+  transform: scale(1.03);
+}
+section.Jogo_n_secreto div div.parametros_do_game {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color_4);
+}
+section.Jogo_n_secreto div div.parametros_do_game p {
+  width: 100%;
+  color: var(--color_1);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  /* ------------------------------------------------ */
+}
+section.Jogo_n_secreto div div.parametros_do_game p span {
+  color: var(--color_3);
+  font-size: 25px;
+  padding: 0 10px;
+  font-family: "Rokkitt", serif;
+}
+section.Jogo_n_secreto div .reiniciar {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  min-width: fit-content;
+  /* ------------------------------------------ */
+}
+section.Jogo_n_secreto div .reiniciar button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color_2);
+  padding: 7px;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--color_0);
+  cursor: pointer;
+  font-weight: bold;
+  /* ---------------------------------------- */
+}
+section.Jogo_n_secreto div .reiniciar button:hover {
+  transform: scale(1.03);
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+/*(INICIO) estilizando o jogo da memória */
+section.jogo_memoria {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* ---------------------------------------------------------------- */
+}
+section.jogo_memoria div {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  /* ------------------------------------------------------ */
+}
+section.jogo_memoria div #jogo {
+  display: grid;
+  width: 40%;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  gap: 20px;
+}
+section.jogo_memoria div #jogo div {
+  background-color: var(--color_1);
+  min-width: 60px;
+  max-width: 100px;
+  min-height: 60px;
+  max-height: 100px;
+  border-radius: 10px;
+  transition: ease-in-out 0.2s;
+  border: 2px solid var(--color_4);
+  box-shadow: 0 0 3px var(--color_5);
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  /* ------------------------------------------------------------------------ */
+}
+section.jogo_memoria div #jogo div.oculto {
+  cursor: pointer;
+  position: relative;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 0;
+  color: var(--color_4);
+}
+section.jogo_memoria div #jogo div.oculto:hover {
+  transform: scale(1.08);
+}
+section.jogo_memoria div div.descoberto {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  min-height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: var(--color_4);
+}
+section.jogo_memoria div div.descoberto p {
+  width: 100%;
+  color: var(--color_1);
+  padding: 10px;
+  font-size: 20px;
+  text-align: center;
+  /* ------------------------------------------------ */
+}
+section.jogo_memoria div div.descoberto p span {
+  color: var(--color_3);
+  font-size: 25px;
+  padding: 0 10px;
+  font-family: "Rokkitt", serif;
+}
+section.jogo_memoria div .reiniciar {
+  width: 100%;
+  max-width: 500px;
+  min-height: 5vh;
+  height: 50px;
+  min-width: fit-content;
+  /* ------------------------------------------ */
+}
+section.jogo_memoria div .reiniciar button {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color_2);
+  padding: 7px;
+  transition: ease-in-out 0.2s;
+  border: 0;
+  outline: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  color: var(--color_0);
+  cursor: pointer;
+  font-weight: bold;
+  /* ---------------------------------------- */
+}
+section.jogo_memoria div .reiniciar button:hover {
+  transform: scale(1.03);
+}
+
+/*# sourceMappingURL=output.css.map */

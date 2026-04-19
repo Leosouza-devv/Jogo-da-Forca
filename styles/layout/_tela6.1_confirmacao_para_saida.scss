@@ -1,0 +1,75 @@
+/*Importação das variaveis*/
+@use "../abstracts/variable";
+
+div {
+    &#sair {
+        position: absolute;
+        left: 5%;
+        top: 5%;
+        font-size: 24px;
+        height: 50px;
+        max-width: 50px;
+        min-width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: variable.$cor_letra_branca;
+        padding: 12px;
+        background-color: variable.$cor_fundo_claro;
+        cursor: pointer;
+        border-radius: 100%;
+        transition: ease-in-out .2s;
+
+        &:hover {
+            transform: scale(1.15);
+            background-color: variable.$cor_buttom;
+            color: var();
+
+
+        }
+    }
+
+    /* estilizando parte da confirmação para saida da tela do game */
+    &#confirmacao_saida {
+        background-color: #252528da;
+        min-width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+
+        & .confirmacao_saida_aux {
+            background-color: variable.$cor_fundo_claro;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 20px;
+            z-index: 1;
+            gap: 30px;
+
+            & div {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+            }
+
+            & h2 {
+                text-align: center;
+                color: variable.$cor_letra_branca;
+                font-size: 30px;
+                margin: 10px;
+
+            }
+        }
+
+    }
+
+}

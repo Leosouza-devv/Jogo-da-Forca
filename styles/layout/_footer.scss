@@ -1,0 +1,53 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/*(INICIO) estilizando rodapé do site */
+footer#rodape_site {
+    width: 100%;
+    min-height: 10vh;
+    background-color: variable.$cor_fundo_claro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    bottom: 0px;
+
+    @media(max-width:1050px) {
+        & {
+            position: relative;
+
+        }
+    }
+
+    & div {
+        margin: 15px 50px;
+
+        &.logo {
+            font-size: 30px;
+            font-family: "Silkscreen", sans-serif;
+            font-weight: bold;
+            text-align: center;
+            color: variable.$cor_letra_branca;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &.devs {
+            font-size: 18px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #AFB6BB;
+
+        }
+
+        &.direitos {
+            font-size: 15px;
+            color: variable.$cor_letra_verde;
+        }
+    }
+}

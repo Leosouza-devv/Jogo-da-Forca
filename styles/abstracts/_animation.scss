@@ -1,0 +1,9 @@
+/* Animações [todas as animações]  */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Começa invisível */
+    }
+    to {
+        opacity: 1; /* Fica completamente visível */
+    }
+}

@@ -1,0 +1,131 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* estilizando tela(3) de coleta de palavras */
+#coletor_palavra {
+
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+
+
+    /* (INICIO)estilizando elementos que pertencem a section #coletor_palavras  */
+
+
+    
+
+    & footer {
+        position: absolute;
+        bottom: 5%;
+        right: 2%;
+        margin: 10px;
+    }
+
+    & div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: left;
+        gap: 50px;
+    }
+
+    /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
+
+
+    /* (INICIO) estilizando os inputs que recebe a palavra e as dicas */
+    & div.tema_palavra {
+        width: 55%;
+        min-width: 300px;
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        /* estilizando o alerta caso o texto não for mensionado */
+        & .palavra,
+        & .tema {
+
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            transition: ease-in-out .2s;
+
+            /* estilizando sinal de alerta */
+            & div {
+                right: 0;
+                transition: ease-in-out .2s;
+                display: none;
+                width: 50px;
+                height: 50px;
+                font-size: 40px;
+                border-radius: 15px;
+                background-color: var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
+                color: variable.$cor_letra_branca;
+
+
+            }
+        }
+
+    }
+
+    & .sub_tit_temaEpalavra {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: variable.$font_gameficada;
+        font-size: 30px;
+        color: variable.$cor_letra_branca;
+        text-align: center;
+
+    }
+
+    & input.input_coletor {
+        width: 80%;
+        min-width: 200px;
+        max-width: 100%;
+        min-height: 5vh;
+        max-height: fit-content;
+        border-radius: 20px;
+        outline: none;
+        border: solid 6px var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
+        font-size: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.5%;
+        color: #252528;
+        font-weight: bold;
+        transition: ease-in-out .2s;
+
+
+        /* estilizando o placeholder do input */
+        &::placeholder {
+            font-size: 20px;
+            position: absolute;
+            left: 2.5%;
+            font-weight: bold;
+            color: variable.$cor_letra_cinza_claro;
+        }
+
+        /* estilizando o input ativado */
+        &:focus {
+            transform: scale(1.05);
+        }
+
+
+    }
+
+
+
+
+
+    /* (FIM) estilizando os inputs que recebe a palavra e as dicas */
+
+}

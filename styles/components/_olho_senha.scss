@@ -1,0 +1,33 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+div.olho_container{
+    width: 100%;
+    height: 5dvh;
+    display: flex;
+
+    .olho{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        background-color: variable.$cor_fundo;
+        border: 0;
+        cursor: pointer;
+        
+
+        & ion-icon{
+            font-size: 50px;
+            color: variable.$cor_letra_cinza_claro;
+            transition: ease-in-out transform .2s;
+
+        }
+
+        &:hover > ion-icon{
+            transform: scale(1.1);
+            color: variable.$cor_letra_branca ;
+        }
+
+    }
+}

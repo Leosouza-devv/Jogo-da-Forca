@@ -1,0 +1,597 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* Estilização para mobile [todas as telas] */
+
+/* Tela 1,2, 3 e 6*/
+@media (min-width:1250px){
+
+
+
+
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        flex-wrap: nowrap;
+        & .forca {
+            min-width: 50%;
+            height: auto;
+            
+
+            
+
+            & .img_forca {
+                width: 500px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas, & .t1, & .t2, & .t3 {
+                    gap: 7px;
+                    & div.tecla{
+                        min-width: 60px;
+                        min-height: 60px;
+                        max-width: 60px;
+                        max-height: 60px;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+@media (min-width:1050px){
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        
+        & .forca {
+            min-width: 50%;
+            height: auto;
+            
+
+            
+
+            & .img_forca {
+                width: 350px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas, & .t1, & .t2, & .t3 {
+                    gap: 7px;
+                    & div.tecla{
+                        min-width: 60px;
+                        min-height: 60px;
+                        max-width: 90%;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 1050px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        & .forca {
+            min-width: 45%;
+            height: 100vh;
+
+            
+
+            & .img_forca {
+                width: 350px;
+            }
+        }
+
+        & .inicial {
+            padding: 1px;
+            width: 55%;
+            height: 100vh;
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 100%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 350px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas, & .t1, & .t2, & .t3 {
+                    gap: 7px;
+                    & div.tecla{
+                        min-width: 55px;
+                        min-height: 55px;
+                        max-width: 90%;
+                        max-height: 90%;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 40px;
+    }
+
+    h2.sub {
+        font-size: 35px;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        & .forca {
+            min-width: 50%;
+            height: 100vh;
+
+            .img_forca {
+                max-width: 300px;
+            }
+
+        }
+
+        & .inicial {
+            width: 50%;
+            height: 100vh;
+
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 70%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 350px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas {
+                    & div.tecla{
+                        min-width: 55px;
+                        min-height: 55px;
+                        max-width: 90%;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 33px;
+    }
+
+    h2.sub {
+        font-size: 35px;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+
+
+}
+
+@media (max-width: 700px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        .forca {
+            min-width: 100%;
+            height: 60vh;
+
+            .img_forca {
+                max-width: 600px;
+            }
+        }
+
+
+        .inicial {
+            width: 100%;
+            height: 40vh;
+        }
+    }
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 40%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 300px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas {
+                    & div.tecla{
+                        min-width: 45px;
+                        min-height: 45px;
+                        max-width: 90%;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 35px;
+    }
+
+    h2.sub {
+        font-size: 35px;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+
+
+}
+
+@media (max-width: 640px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        .forca {
+            min-width: 100%;
+            height: 60vh;
+
+            .img_forca {
+                max-width: 500px;
+            }
+
+        }
+
+        .inicial {
+
+            width: 100%;
+            height: 40vh;
+
+
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 50%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 300px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas {
+                    & div.tecla{
+                        min-width: 45px;
+                        min-height: 45px;
+                        max-width: 90%;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 35px;
+    }
+
+    h2.sub {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+
+
+}
+@media (max-width: 560px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        .forca {
+            min-width: 100%;
+            height: 60vh;
+
+            .img_forca {
+                max-width: 500px;
+            }
+
+        }
+
+        .inicial {
+
+            width: 100%;
+            height: 40vh;
+
+
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 70%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 300px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas {
+                    
+                    & div.tecla{
+                        min-width: 40px;
+                        min-height: 40px;
+                        max-width: 90%;
+                        max-height: 90%;
+                    }
+                }
+            }
+        }
+    }
+
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 35px;
+    }
+
+    h2.sub {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 25px;
+    }
+
+
+
+}
+
+@media (max-width: 480px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        .forca {
+            min-width: 100%;
+            height: 60vh;
+            margin: 0;
+
+            .img_forca {
+                max-width: 300px;
+            }
+
+
+        }
+
+
+        .inicial {
+
+            width: 100%;
+            height: 40vh;
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 70%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 350px;
+            }
+        }
+
+        & div {
+            min-width: 50%;
+            height:auto;
+
+            & div {
+                & div.teclas, & .t1, & .t2, & .t3 {
+                    gap: 2px;
+                    & div.tecla{
+                        min-width: 10px;
+                        min-height: 10px;
+                        padding: 5px 12px;
+                        
+                    }
+                }
+            }
+        }
+
+        & div.palavraOculta{
+            & div{
+                transform: scale(.6);
+            }
+            
+        }
+    }
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 30px;
+    }
+
+    h2.sub {
+        font-size: 30px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+
+    /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
+    #tela_inicial {
+        .forca {
+            min-width: 100%;
+            height: 50vh;
+
+            .img_forca {
+                max-width: 250px;
+            }
+
+        }
+
+        .inicial {
+            padding: 1px;
+            width: 100%;
+            height: 50vh;
+
+        }
+    }
+
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    #game {
+        & .forca {
+            min-width: 70%;
+            height: auto;
+
+            
+
+            & .img_forca {
+                width: 300px;
+            }
+        }
+
+        & div {
+            min-width: 100%;
+            height:auto;
+
+            & div {
+                & div.teclas, & .t1, & .t2, & .t3 {
+                
+                    & div.tecla{
+                        max-width: 100%;
+                        max-height: 50px;
+                        padding: 15px 10px;
+
+                    }
+                }
+            }
+        }
+
+        & div.palavraOculta{
+            & div.P_O{
+                transform: scale(.3);
+            }
+            
+        }
+    }
+
+    /* estilização geral [todas as paginas]*/
+    h1.name_game {
+        font-size: 27px;
+    }
+
+    h2.sub {
+        font-size: 25px;
+    }
+
+    .btn {
+        font-size: 18px;
+    }
+
+}
+
+/* (FIM) Estilização mobile [todas as telas] */

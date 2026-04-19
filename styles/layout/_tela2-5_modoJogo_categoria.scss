@@ -1,0 +1,54 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+/* estilizando tela(2) que define o modo de jogo --sozinho ou em grupo--  */
+.modoJogo_categoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    position: relative;
+    
+
+
+
+    
+
+    & footer {
+        position: absolute;
+        bottom: 5%;
+        right: 2%;
+        margin: 10px;
+    }
+
+
+    & div.escolha_modo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 1440px;
+        text-align: left;
+        gap: 50px;
+        & div.modos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        & h2 {
+            font-size: 40px;
+            font-family: variable.$font_gameficada;
+            color: variable.$cor_letra_branca;
+            text-align: center;
+            @media (max-width: 500px){
+                &{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+}
