@@ -17,6 +17,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 15vh 0 5vh 0;
         
         
         /* estilizando botão da dica e do tema */
@@ -62,19 +63,26 @@
             background-color: variable.$cor_buttom;
             min-width: 200px;
             width: fit-content;
-            height: 70px;
-            padding: 5px 10px;
+            min-height: 70px;
+            max-height: fit-content;
+            padding: 10px;
             border-radius: 15px;
             position: relative;
             margin: 10px;
             transition: ease-in-out .2s;
             opacity: 0;
+
+            word-wrap: break-word;
+
+            text-align: center;
+
+            
             
 
             & #seta{
                 font-size: 55px;
                 position: absolute;
-                top: -45%;
+                top: -30px;
                 color: variable.$cor_buttom;
             }
 
@@ -107,6 +115,7 @@
         display: flex;
         flex-direction: column;
         gap:40px;
+        padding: 5vh 0; 
 
         /* estilizando palavra oculta */
         & #palavraOculta{

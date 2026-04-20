@@ -47,6 +47,8 @@
 }
 @media (min-width:1050px){
 
+  
+
     /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
     #game {
         
@@ -83,13 +85,20 @@
 
 }
 
+
+
 @media (max-width: 1050px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         & .forca {
             min-width: 45%;
-            height: 100vh;
+            min-height: 100vh;
 
             
 
@@ -101,7 +110,7 @@
         & .inicial {
             padding: 1px;
             width: 55%;
-            height: 100vh;
+            min-height: 100vh;
 
         }
     }
@@ -156,13 +165,18 @@
 
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         & .forca {
-            min-width: 50%;
-            height: 100vh;
+            min-width: 100%;
+            min-height: 60vh;
 
             .img_forca {
                 max-width: 300px;
@@ -171,23 +185,23 @@
         }
 
         & .inicial {
-            width: 50%;
-            height: 100vh;
+            width: 100%;
+            min-height: 40vh;
 
 
         }
     }
 
-    /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
+    /*(#game) bloco de codigo responsavel pela responsividade da tela 6 -- tela do game -- */
     #game {
         & .forca {
-            min-width: 70%;
+            min-width: 100%;
             height: auto;
 
             
 
-            & .img_forca {
-                width: 350px;
+            .img_forca {
+                max-width: 600px;
             }
         }
 
@@ -229,11 +243,16 @@
 
 @media (max-width: 700px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         .forca {
             min-width: 100%;
-            height: 60vh;
+            height: 60dvh;
 
             .img_forca {
                 max-width: 600px;
@@ -243,25 +262,25 @@
 
         .inicial {
             width: 100%;
-            height: 40vh;
+            height: 40dvh;
         }
     }
     /*(#game) bloco de codigo responsavel pela responsividade da tela 4 -- tela do game -- */
     #game {
         & .forca {
-            min-width: 40%;
-            height: auto;
+            min-width: 100%;
+            min-height: auto;
 
             
 
             & .img_forca {
-                width: 300px;
+                width: 500px;
             }
         }
 
         & div {
-            min-width: 50%;
-            height:auto;
+            min-width: 100%;
+            min-height:auto;
 
             & div {
                 & div.teclas {
@@ -298,6 +317,11 @@
 
 @media (max-width: 640px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         .forca {
@@ -305,7 +329,7 @@
             height: 60vh;
 
             .img_forca {
-                max-width: 500px;
+                max-width: 300px;
             }
 
         }
@@ -324,7 +348,7 @@
     #game {
         & .forca {
             min-width: 50%;
-            height: auto;
+            min-height: auto;
 
             
 
@@ -335,7 +359,7 @@
 
         & div {
             min-width: 50%;
-            height:auto;
+            min-height:auto;
 
             & div {
                 & div.teclas {
@@ -357,7 +381,7 @@
     }
 
     h2.sub {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .btn {
@@ -369,11 +393,16 @@
 }
 @media (max-width: 560px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         .forca {
             min-width: 100%;
-            height: 60vh;
+            min-height: 60vh;
 
             .img_forca {
                 max-width: 500px;
@@ -384,7 +413,7 @@
         .inicial {
 
             width: 100%;
-            height: 40vh;
+            min-height: 40vh;
 
 
 
@@ -428,9 +457,7 @@
         font-size: 35px;
     }
 
-    h2.sub {
-        font-size: 30px;
-    }
+
 
     .btn {
         font-size: 25px;
@@ -442,11 +469,16 @@
 
 @media (max-width: 480px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         .forca {
             min-width: 100%;
-            height: 60vh;
+            min-height: 60vh;
             margin: 0;
 
             .img_forca {
@@ -460,7 +492,7 @@
         .inicial {
 
             width: 100%;
-            height: 40vh;
+            min-height: 40vh;
 
         }
     }
@@ -508,9 +540,7 @@
         font-size: 30px;
     }
 
-    h2.sub {
-        font-size: 30px;
-    }
+
 
     .btn {
         font-size: 20px;
@@ -521,11 +551,16 @@
 
 @media (max-width: 400px) {
 
+      main{
+        min-height: 90dvh;
+        
+        
+    }
     /* (&#tela_inicial) bloco de codigos responsavel pela responsividade da tela 1 */
     #tela_inicial {
         .forca {
             min-width: 100%;
-            height: 50vh;
+            min-height: 50vh;
 
             .img_forca {
                 max-width: 250px;
@@ -536,7 +571,7 @@
         .inicial {
             padding: 1px;
             width: 100%;
-            height: 50vh;
+            min-height: 50vh;
 
         }
     }
@@ -555,7 +590,6 @@
         }
 
         & div {
-            min-width: 100%;
             height:auto;
 
             & div {
@@ -584,9 +618,6 @@
         font-size: 27px;
     }
 
-    h2.sub {
-        font-size: 25px;
-    }
 
     .btn {
         font-size: 18px;

@@ -46,6 +46,7 @@ div {
             background-color: variable.$cor_fundo_claro;
             width: 300px;
             height: 300px;
+            min-height: fit-content;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -53,6 +54,7 @@ div {
             border-radius: 20px;
             z-index: 1;
             gap: 30px;
+            padding: 30px;
 
             & div {
                 display: flex;

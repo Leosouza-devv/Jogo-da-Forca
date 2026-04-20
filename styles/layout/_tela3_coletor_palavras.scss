@@ -61,8 +61,10 @@
                 right: 0;
                 transition: ease-in-out .2s;
                 display: none;
-                width: 50px;
-                height: 50px;
+                min-width: 50px;
+                max-width: 50px;
+                min-height: 50px;
+                max-height: 50px;
                 font-size: 40px;
                 border-radius: 15px;
                 background-color: var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
@@ -90,7 +92,7 @@
         width: 80%;
         min-width: 200px;
         max-width: 100%;
-        min-height: 5vh;
+        min-height: 7vh;
         max-height: fit-content;
         border-radius: 20px;
         outline: none;
