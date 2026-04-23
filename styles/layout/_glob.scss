@@ -51,7 +51,7 @@ body{
                 
                 width: 100%;
                 min-height: fit-content ;
-                padding: 2vh 25px;
+                padding:  25px;
 
                 
             }
@@ -61,13 +61,13 @@ body{
     }
 }
 
-
+@import 'barra_do_app';
 @import 'footer';
 @import 'responsive';
 @import 'tela1_tela_inicial';
 @import 'tela2-5_modoJogo_categoria';
 @import 'tela3_coletor_palavras';
-// @import 'tela4_como_funciona_o_jogo';
+@import 'tela4_como_funciona_o_jogo';
 @import 'tela5_categoria_do_jogo';
 @import 'tela6_game_forca';
 @import 'tela6.1_confirmacao_para_saida';

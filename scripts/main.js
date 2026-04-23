@@ -9,9 +9,7 @@ let coletor_palavra = document.getElementById('coletor_palavra');
 let como_funciona = document.getElementById('como_funciona');
 let forca = document.getElementById('game');
 let fim_game = document.getElementById('fim_game');
-let outros_games = document.getElementById('outros_games');
-
-
+let outros_games = document.getElementById('outros_games'); 
 
 let alert1 = document.getElementById('alert1');
 let alert2 = document.getElementById('alert2');
@@ -260,7 +258,7 @@ function saida(confirmacao, abrir_saida) {
         confirmacao_saida.style.display = 'none';
         letras_descobertas = 0;//reinicia quantidade de letras descobertas
         vidas = 7;//reinicia quantidade de vidas 
-        img_forca_game.innerHTML = '<img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
+        img_forca_game.innerHTML = '<img src="assets/fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
         teclasUsadas = new Set();//reinicia teclas usadas no game 
 
 
@@ -407,7 +405,7 @@ function teclado_palavraOculta(tecla, numero_tecla_pressionada) {
             vidas -= 1;
             let img_forca_game = document.getElementById('img_forca_game');
 
-            img_forca_game.innerHTML = '<img src="fotos/vida_' + vidas + '.svg" alt="Imagem do jogo da forca" class="img_forca" >';
+            img_forca_game.innerHTML = '<img src="assets/fotos/vida_' + vidas + '.svg" alt="Imagem do jogo da forca" class="img_forca" >';
 
             //mudando a cor da tecla quando pressionada(cor alterada para quando não for a letra)
             let tecla_pressionada = document.getElementById('tecla_' + numero_tecla_pressionada);

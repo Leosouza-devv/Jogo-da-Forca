@@ -1,0 +1,53 @@
+/*Importação das variaveis*/
+@use "../abstracts/variable";
+
+.title-bar {
+    width: 100%;
+    height: 35px;
+    position: absolute;
+    top: 0;
+    z-index: 99999;
+    background: variable.$cor_fundo_escuro;
+    color: variable.$cor_letra_branca;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: variable.$font_gameficada;
+    padding: 0 10px;
+    overflow: hidden;
+
+    -webkit-app-region: drag;
+}
+
+.title {
+    font-size: 14px;
+}
+
+.window-controls {
+    display: flex;
+    gap: 8px;
+    position: absolute;
+    right: 0;
+    padding-right:2px ;
+}
+
+.window-controls button {
+    width: 35px;
+    height: 35px;
+    
+    border: none;
+    background: transparent;
+    color: variable.$cor_letra_branca;
+    cursor: pointer;
+    
+    -webkit-app-region: no-drag;
+}
+
+.window-controls button:hover {
+    background: variable.$cor_buttom_hover;
+    transition: ease-in-out .2s;
+}
+
+#close:hover  {
+    background: red;
+}

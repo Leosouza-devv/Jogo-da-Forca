@@ -80,7 +80,7 @@ body::before {
 #btn_audio {
   position: fixed;
   right: 5%;
-  top: 5%;
+  top: 7%;
   font-size: 24px;
   height: 50px;
   max-width: 50px;
@@ -158,7 +158,7 @@ body::before {
 
 header.btn_voltar {
   position: absolute;
-  top: 5%;
+  top: 7%;
   left: 2%;
   margin: 10px;
 }
@@ -269,7 +269,78 @@ body main section.section_forca div.tela_container {
   justify-content: space-between;
   width: 100%;
   min-height: fit-content;
-  padding: 2vh 25px;
+  padding: 25px;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+.title-bar {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  top: 0;
+  z-index: 99999;
+  background: rgb(33, 33, 36);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Silkscreen", sans-serif;
+  padding: 0 10px;
+  overflow: hidden;
+  -webkit-app-region: drag;
+}
+
+.title {
+  font-size: 14px;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+  right: 0;
+  padding-right: 2px;
+}
+
+.window-controls button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.window-controls button:hover {
+  background: #09ab80;
+  transition: ease-in-out 0.2s;
+}
+
+#close:hover {
+  background: red;
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -370,14 +441,14 @@ footer#rodape_site div.direitos {
     flex-wrap: nowrap;
   }
   #game .forca {
-    min-width: 50%;
+    min-width: 40%;
     height: auto;
   }
   #game .forca .img_forca {
     width: 500px;
   }
   #game div {
-    min-width: 50%;
+    min-width: 60%;
     height: auto;
   }
   #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
@@ -409,8 +480,8 @@ footer#rodape_site div.direitos {
   #game div div div.teclas div.tecla, #game div div .t1 div.tecla, #game div div .t2 div.tecla, #game div div .t3 div.tecla {
     min-width: 60px;
     min-height: 60px;
-    max-width: 90%;
-    max-height: 90%;
+    max-width: 100%;
+    max-height: 100%;
   }
 }
 @media (max-width: 1050px) {
@@ -439,7 +510,7 @@ footer#rodape_site div.direitos {
     width: 350px;
   }
   #game div {
-    min-width: 50%;
+    min-width: 100%;
     height: auto;
   }
   #game div div div.teclas, #game div div .t1, #game div div .t2, #game div div .t3 {
@@ -462,7 +533,7 @@ footer#rodape_site div.direitos {
     font-size: 25px;
   }
 }
-@media (max-width: 850px) {
+@media (max-width: 870px) {
   main {
     min-height: 90dvh;
   }
@@ -487,7 +558,7 @@ footer#rodape_site div.direitos {
     max-width: 600px;
   }
   #game div {
-    min-width: 50%;
+    min-width: 100%;
     height: auto;
   }
   #game div div div.teclas div.tecla {
@@ -913,7 +984,7 @@ footer#rodape_site div.direitos {
   align-items: center;
   width: 100%;
   text-align: left;
-  gap: 50px;
+  gap: 40px;
 }
 #coletor_palavra {
   /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
@@ -965,7 +1036,7 @@ footer#rodape_site div.direitos {
   width: 80%;
   min-width: 200px;
   max-width: 100%;
-  min-height: 7vh;
+  min-height: 7.5vh;
   max-height: fit-content;
   border-radius: 20px;
   outline: none;
@@ -995,6 +1066,18 @@ footer#rodape_site div.direitos {
 }
 #coletor_palavra {
   /* (FIM) estilizando os inputs que recebe a palavra e as dicas */
+}
+
+.tela_funcionamento {
+  width: 80dvh;
+  max-width: 1440px;
+  min-height: 100dvh;
+  max-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 0 5vh 0;
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -1141,6 +1224,7 @@ footer#rodape_site div.direitos {
   align-items: center;
   gap: 15px;
   flex-wrap: wrap;
+  padding: 10px;
 }
 #game div.teclado_palavraOculta #palavraOculta div {
   min-width: 30px;
@@ -1169,7 +1253,6 @@ footer#rodape_site div.direitos {
   align-items: center;
   gap: 7px;
   padding: 10px;
-  overflow: hidden;
 }
 #game div.teclado_palavraOculta #teclado .t1 {
   display: grid;
@@ -1239,7 +1322,7 @@ footer#rodape_site div.direitos {
 div#sair {
   position: absolute;
   left: 5%;
-  top: 5%;
+  top: 6%;
   font-size: 24px;
   height: 50px;
   max-width: 50px;

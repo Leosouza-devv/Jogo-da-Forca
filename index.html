@@ -4,7 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
-    <title>Jogo da forca</title>
+    <!-- barra do app -->
+    <div class="title-bar">
+        <span class="title">Jogo da Forca</span>
+
+        <div class="window-controls">
+            <button id="min">—</button>
+            <button id="max">☐</button>
+            <button id="close">✕</button>
+        </div>
+    </div>
     <!-- codigo CSS -->
     <link rel="stylesheet" href="styles/output.css">
     <!-- codigo JavaScript -->
@@ -12,6 +21,7 @@
     <script src="scripts/jogo_da_memoria.js" defer></script>
     <script src="scripts/jogo_do_numero_secreto" defer></script>
     <script src="scripts/jogo_da_velha.js" defer></script>
+    <script src="scripts/renderer.js" defer></script>
     <!-- script referente aos icones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js" defer></script>
@@ -30,27 +40,36 @@
         <!--(INICIO) audios do game -->
         <section>
             <!-- SOM DE FUNDO DO GAME -->
-            <audio src="audio/lofi.mp3" loop id="audio_fundo"></audio>
+            <audio src="assets/audio/lofi.mp3" loop id="audio_fundo"></audio>
             <div id="btn_audio" onclick="trilha(); btn_som();"><ion-icon name="volume-mute"></ion-icon></div>
 
 
             <!-- SOM DOS BOTÕES DO GAME -->
-            <audio src="audio/click.mp3" id="audio_click"></audio>
+            <audio src="assets/audio/click.mp3" id="audio_click"></audio>
 
             <!-- SOM PERDENDO A VIDA (ERRANDO A TECLA ERRADA)-->
-            <audio src="audio/tecla_errada.mp3" id="audio_tecla_errada"></audio>
+            <audio src="assets/audio/tecla_errada.mp3" id="audio_tecla_errada"></audio>
 
             <!-- SOM ACERTANDO A TECLA -->
-            <audio src="audio/tecla_certa.mp3" id="audio_tecla_certa"></audio>
+            <audio src="assets/audio/tecla_certa.mp3" id="audio_tecla_certa"></audio>
 
             <!-- SOM PERDENDO O GAME -->
-            <audio src="audio/fracasso.mp3" id="audio_perdendo"></audio>
+            <audio src="assets/audio/fracasso.mp3" id="audio_perdendo"></audio>
 
             <!-- SOM GANHANDO O GAME -->
-            <audio src="audio/aplausos.mp3" id="audio_ganhando"></audio>
+            <audio src="assets/audio/aplausos.mp3" id="audio_ganhando"></audio>
 
             <!--(FIM) audios do game -->
         </section>
+
+        <!-- TELA 0---------------------------------------------------------------------------------------------------- -->
+        <!-- Tela de carregamento-->
+
+
+
+
+        <!-- ---------------------------------------------------------------------------------------------------------- -->
+
 
         <!-- TELA 1---------------------------------------------------------------------------------------------------- -->
         <!-- Tela inicial do game-->
@@ -61,7 +80,7 @@
                 <div class="forca">
                     <!-- foto da forca (Pagina inicial) -->
                     <div class="img_tela_inicial">
-                        <img src="fotos/gif_vidas.gif" class="img_forca" alt="Imagem do jogo da forca">
+                        <img src="assets/fotos/gif_vidas.gif" class="img_forca" alt="Imagem do jogo da forca">
                     </div>
 
                 </div>
@@ -161,7 +180,7 @@
                 <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon>
                     Voltar</button>
             </header>
-            <div class="tela_container">
+            <div class="tela_funcionamento">
                 <!-- HERO -->
                 <div class="hero">
                     <div class="hero-badge">Guia do Jogador</div>
@@ -456,7 +475,7 @@
             <div class="forca desfoque_1">
                 <div class="img_tela_inicial " id="img_forca_game">
 
-                    <img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" id="ft_7">
+                    <img src="assets/fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" id="ft_7">
 
 
                 </div>

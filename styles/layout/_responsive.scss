@@ -14,7 +14,7 @@
     #game {
         flex-wrap: nowrap;
         & .forca {
-            min-width: 50%;
+            min-width: 40%;
             height: auto;
             
 
@@ -26,7 +26,7 @@
         }
 
         & div {
-            min-width: 50%;
+            min-width: 60%;
             height:auto;
 
             & div {
@@ -74,8 +74,8 @@
                     & div.tecla{
                         min-width: 60px;
                         min-height: 60px;
-                        max-width: 90%;
-                        max-height: 90%;
+                        max-width: 100%;
+                        max-height: 100%;
                     }
                 }
             }
@@ -129,7 +129,7 @@
         }
 
         & div {
-            min-width: 50%;
+            min-width: 100%;
             height:auto;
 
             & div {
@@ -165,7 +165,7 @@
 
 }
 
-@media (max-width: 850px) {
+@media (max-width: 870px) {
 
       main{
         min-height: 90dvh;
@@ -206,7 +206,7 @@
         }
 
         & div {
-            min-width: 50%;
+            min-width: 100%;
             height:auto;
 
             & div {
