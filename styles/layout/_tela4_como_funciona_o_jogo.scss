@@ -1,13 +1,311 @@
-.tela_funcionamento{
-  width: 80dvh;
-  max-width: 1440px;
-  min-height: 100dvh;
-  max-height: fit-content;
+/* ---------- containers_principais ---------- */
+.tela_funcionamento {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vh 0 5vh 0;
+  gap: 2.5rem;
+  width: 80dvw;
+  max-width: 1440px;
+  overflow: hidden;
+
+  padding: 20vh 0 5vh 0;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    max-height: fit-content;
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      font-family: variable.$font_gameficada;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: variable.$cor_letra_cinza_claro;
+      border-bottom: 1px solid variable.$cor_letra_cinza_claro;
+      padding-top: 72px;
+    }
+  }
+}
 
 
+
+
+
+
+
+/* ---------- Steps (passos / itens) ---------- */
+.steps {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-num{
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: variable.$cor_fundo_bege;
+  color: variable.$cor_fundo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: variable.$font_gameficada;
+  font-size: 24px;
+}
+
+.step-body {
+  width: 95%;
+  height: fit-content;
+    background: #fff;
+  border-radius: 24px;
+    padding: 1rem 1.25rem;
+    
+    box-shadow: -6px 6px 0px variable.$cor_fundo_bege;
+    
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 4px;
+    color: #1a1a1a;
+  }
+
+  p {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  ul{
+    font-size: 14px;
+    text-indent: 18px;
+    list-style:'';
+    flex-wrap: wrap;
+
+    li{
+      color: #1a1a1a;
+      font-weight: 600;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+
+  }
+
+  &.step-img{
+    background-color: variable.$cor_fundo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 100%;
+    min-height:100% ;
+    box-shadow: 0 0 0;
+    
+    img{
+      border-radius:24px ;
+      min-width: 300px;
+      min-height: none;
+      max-width: 300px;
+    max-height: 300px;
+    padding: 20px;
+    }
+    ul{
+      display: flex; 
+      justify-content: center; 
+      align-items: center;
+    }
+
+  }
+
+}
+
+
+/* ---------- Modos de jogo ---------- */
+.modes_flex {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 12px;
+  div.flex_aux {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+  }
+}
+
+
+.mode-card {
+  flex: 1 300px;
+  width: 95%;
+  min-height: 300px;
+
+  background: #fff;
+  box-shadow: -6px 6px 0 variable.$cor_fundo_bege;
+  border-radius: 24px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  
+}
+
+.mode-icon {
+  font-size: 24px;
+}
+
+.mode-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.mode-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.mode-tag {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: variable.$cor_fundo_bege;
+  color: variable.$cor_fundo;
+}
+
+/* ---------- Grid de categorias ---------- */
+.cats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 14px;
+  color: #555;
+  cursor: default;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.cat:hover {
+  border-color: var(--forca-accent);
+  color: var(--forca-accent-dark);
+}
+
+.cat span {
+  font-size: 16px;
+}
+
+/* ---------- Caixa de dica ---------- */
+.tip-box {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+ 
+  div.flex_aux{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     background: variable.$cor_letra_branca;
+  box-shadow: -6px 6px 0 variable.$cor_fundo_bege ;
+  border-radius: 24px;
+  padding: 1.25rem;
+  }
+}
+
+.tip-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tip-box p {
+  font-size: 14px;
+  color: var(--forca-gold-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- CTA final ---------- */
+.cta {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: variable.$cor_letra_branca;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  font-family: variable.$font_gameficada;
+}
+
+.cta p {
+  font-size: 18px;
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kb-key {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .step {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

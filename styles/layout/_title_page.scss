@@ -1,0 +1,44 @@
+/*Importação das variaveis*/ 
+@use "../abstracts/variable";
+
+.title_page {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .title_badge {
+        display: inline-block;
+        background: variable.$cor_fundo_bege;
+        color: variable.$cor_fundo;
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+        padding: 4px 14px;
+        border-radius: 999px;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 36px;
+        font-weight: 600;
+        color: variable.$cor_letra_branca;
+        font-family: variable.$font_gameficada;
+
+        & span {
+            color: variable.$cor_buttom;
+
+        }
+    }
+
+    p {
+        font-size: 18px;
+        color: variable.$cor_letra_branca;
+        max-width: 500px;
+        margin: 0 auto;
+        line-height: 1.7;
+    }
+}
+

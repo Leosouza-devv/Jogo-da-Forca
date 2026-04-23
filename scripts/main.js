@@ -224,14 +224,14 @@ function toggle() {
         dica.style.webkitTextSecurity = "none";
         olho.innerHTML = `
       
-        <ion-icon name="eye"></ion-icon>
+        <ion-icon name="eye"></ion-icon> <span>Palavra e dica visível</span>
 
     `;
     } else {
         palavra.style.webkitTextSecurity = "disc";
         dica.style.webkitTextSecurity = "disc";
         olho.innerHTML = `
-        <ion-icon name="eye-off" style="color:#ab0944;"></ion-icon>
+        <ion-icon name="eye-off" style="color:#ab0944;"></ion-icon> <span style="color:#ab0944;">Palavra e dica oculta</span>
     `;
     }
 }
@@ -426,7 +426,7 @@ function teclado_palavraOculta(tecla, numero_tecla_pressionada) {
             letras_descobertas = 0;
             vidas = 7;
             teclasUsadas = new Set();
-            img_forca_game.innerHTML = '<img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
+            img_forca_game.innerHTML = '<img src="assets/fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
             game(7, 'Fim de jogo, você perdeu! <br><span> A palavra era "' + array_palavra.join('') + '"</span>');
             //audio perdendo o game
             let audio_perdendo = document.getElementById('audio_perdendo');
@@ -442,7 +442,7 @@ function teclado_palavraOculta(tecla, numero_tecla_pressionada) {
             letras_descobertas = 0;
             vidas = 7;
             teclasUsadas = new Set();
-            img_forca_game.innerHTML = '<img src="fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
+            img_forca_game.innerHTML = '<img src="assets/fotos/vida_7.svg" alt="Imagem do jogo da forca" class="img_forca" >';
             game(7, 'Parabéns, você ganhou!');
 
             //audio ganhando o game 

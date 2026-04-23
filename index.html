@@ -18,9 +18,6 @@
     <link rel="stylesheet" href="styles/output.css">
     <!-- codigo JavaScript -->
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/jogo_da_memoria.js" defer></script>
-    <script src="scripts/jogo_do_numero_secreto" defer></script>
-    <script src="scripts/jogo_da_velha.js" defer></script>
     <script src="scripts/renderer.js" defer></script>
     <!-- script referente aos icones -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js" defer></script>
@@ -76,7 +73,7 @@
         <section id="tela_inicial" class="section_forca">
 
             <!-- forca-->
-            <div class="tela_container">
+            <div class="tela_container height_tela">
                 <div class="forca">
                     <!-- foto da forca (Pagina inicial) -->
                     <div class="img_tela_inicial">
@@ -115,8 +112,12 @@
                 <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon>
                     Voltar</button>
             </header>
-            <div class="escolha_modo tela_container">
-                <h2 class="sub">Escolha o modo de jogo</h2>
+            <div class="escolha_modo tela_container height_tela">
+                <!-- title -->
+                <div class="title_page">
+                    <div class="title_badge">Modo de jogo</div>
+                    <h2>Escolha o <span>modo</span> de jogo</h2>
+                </div>
                 <div class="modos btn_container">
 
                     <!-- botões referentes aos modos do game -->
@@ -142,23 +143,27 @@
             </header>
 
             <!-- barra de coleta da palavra e da dica ou tema da palavra escolhida -->
-            <div class="tema_palavra tela_container">
-                <div class="sub_tit_temaEpalavra">
-                    <h2 class="sub">Informe a palavra</h2>
+            <div class="tema_palavra tela_container height_tela">
+                <!-- title -->
+                <div class="title_page">
+                    <div class="title_badge">Multijogador</div>
+                    <h2>Escolha a <span>palavra e a dica</span> para o jogo</h2>
                 </div>
-                <div class="olho_container">
-                    <button id="olho" class="olho" onclick="toggle()" title="Mostrar/ocultar">
-                        <ion-icon name="eye"></ion-icon>
-                    </button>
-                </div>
-                <div class="palavra">
-                    <input type="text" id="palavra" class="input_coletor" placeholder="Digite a palavra " required>
-                    <div id="alert1">!</div>
-                </div>
-                <div class="tema">
-                    <input type="text" id="tema" class="input_coletor "
-                        placeholder="Digite o tema ou uma dica para palavra" required>
-                    <div id="alert2">!</div>
+                <div class="container_inputs">
+                    <div class="olho_container">
+                        <button id="olho" class="olho" onclick="toggle()" title="Mostrar/ocultar">
+                            <ion-icon name="eye"></ion-icon>
+                        </button>
+                    </div>
+                    <div class="palavra">
+                        <input type="text" id="palavra" class="input_coletor" placeholder="Digite a palavra " required>
+                        <div id="alert1">!</div>
+                    </div>
+                    <div class="tema">
+                        <input type="text" id="tema" class="input_coletor "
+                            placeholder="Digite o tema ou uma dica para palavra" required>
+                        <div id="alert2">!</div>
+                    </div>
                 </div>
 
             </div>
@@ -176,14 +181,15 @@
         <!--TELA 4 ---------------------------------------------------------------------------------------------------- -->
         <!-- Tela da explicação do game -->
         <section id="como_funciona" class="section_forca btn_container">
+
             <header class="btn_voltar btn_container">
                 <button class="btn" onclick="game(1); btn_som();"><ion-icon name="arrow-undo"></ion-icon>
                     Voltar</button>
             </header>
-            <div class="tela_funcionamento">
-                <!-- HERO -->
-                <div class="hero">
-                    <div class="hero-badge">Guia do Jogador</div>
+            <div class="tela_funcionamento height_tela">
+                <!-- title -->
+                <div class="title_page">
+                    <div class="title_badge">Guia do Jogador</div>
                     <h2>Como <span>jogar</span> a Forca?</h2>
                     <p>Aprenda as regras, conheça os modos de jogo e descubra como adivinhar a palavra certa antes que o
                         boneco caia!</p>
@@ -194,12 +200,28 @@
                     <div class="section-title">01 — O que é o jogo</div>
                     <div class="steps">
                         <div class="step">
-                            <div class="step-num">?</div>
                             <div class="step-body">
                                 <h3>O objetivo do jogo</h3>
-                                <p>Uma <strong>palavra secreta</strong> é escolhida e representada por traços em branco
-                                    — um traço para cada letra. Você deve descobrir a palavra <strong>antes de errar 7
-                                        letras</strong>. Cada erro desenha uma parte do boneco na forca.</p>
+                                <p>O <strong>jogo da forca</strong> desenvolvido neste projeto segue a mesma lógica
+                                    tradicional, mas com uma proposta diferente no formato das dicas apresentadas ao
+                                    jogador.</p>
+                                <p>Em vez de utilizar temas genéricos (como “animal”, “país” ou “objeto”), o jogo
+                                    apresenta dicas no formato de pequenos enunciados. Esses enunciados funcionam como
+                                    pistas mais descritivas, que exigem <strong>interpretação</strong> e
+                                    <strong>raciocínio</strong>, e não apenas associação direta a um tema.
+                                </p>
+                                <p>O principal objetivo dessa abordagem é transformar o jogo em uma experiência mais
+                                    educativa e estimulante. Ao interagir com diferentes tipos de enunciados, o jogador
+                                    é incentivado a:</p>
+                                <ul>
+                                    <li>🧠 relembrar conhecimentos que já possui;</li>
+                                    <li>📚 aprender novas informações de forma leve;</li>
+                                    <li>🔍 estimular a curiosidade ao tentar descobrir a resposta.</li>
+                                </ul>
+                                <p>Dessa forma, o jogo deixa de ser apenas uma atividade de entretenimento e passa a
+                                    atuar também como uma <strong>ferramenta de aprendizado intuitivo</strong>,
+                                    explorando diferentes áreas do conhecimento de maneira dinâmica.</p>
+
                             </div>
                         </div>
                     </div>
@@ -208,198 +230,273 @@
                 <!-- SECTION: COMO FUNCIONA A PALAVRA -->
                 <div class="section">
                     <div class="section-title">02 — A palavra oculta</div>
-                    <div class="word-demo" id="wordDemo">
-                        <!-- gerado pelo JS -->
-                    </div>
-                    <p class="interact-note">clique nas letras do teclado abaixo para ver como funciona ↓</p>
-                </div>
-
-                <!-- SECTION: TECLADO -->
-                <div class="section">
-                    <div class="section-title">03 — O teclado</div>
-                    <div class="keyboard-demo">
-                        <div id="keyboardDemo"></div>
-                        <div class="kb-legend">
-                            <div class="kb-legend-item">
-                                <div class="dot normal"></div> Não usada
-                            </div>
-                            <div class="kb-legend-item">
-                                <div class="dot hit"></div> Acertou
-                            </div>
-                            <div class="kb-legend-item">
-                                <div class="dot miss"></div> Errou
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECTION: VIDAS -->
-                <div class="section">
-                    <div class="section-title">04 — As vidas</div>
-                    <div class="lives-demo">
-                        <div class="lives-row" id="livesRow"></div>
-                        <div class="lives-note">
-                            Você começa com <strong>7 vidas</strong>. A cada letra errada, perde uma vida e<br>
-                            o boneco ganha mais um pedaço. Quando as 7 acabam — <strong>game over!</strong>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECTION: DICA -->
-                <div class="section">
-                    <div class="section-title">05 — A dica</div>
                     <div class="steps">
                         <div class="step">
-                            <div class="step-num">💡</div>
                             <div class="step-body">
-                                <h3>Usando a dica ou tema</h3>
-                                <p>Durante o jogo há um botão de <strong>lâmpada</strong> (💡) que revela o tema ou uma
-                                    dica relacionada à palavra. Use com sabedoria — ela pode ser o empurrão que faltava
-                                    para descobrir a resposta!</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">🔤</div>
-                            <div class="step-body">
-                                <h3>Acentos e caracteres especiais</h3>
-                                <p>O jogo aceita letras com acento automaticamente. Por exemplo: ao pressionar
-                                    <code>A</code>, o sistema reconhece tanto <strong>A</strong> quanto <strong>Á, Â, Ã,
-                                        À</strong>. Você nunca precisa se preocupar com acentuação!
-                                </p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">➖</div>
-                            <div class="step-body">
-                                <h3>Palavras compostas</h3>
-                                <p>Palavras com hífen ou espaço são exibidas com um <strong>traço visível</strong> entre
-                                    as partes. Esse traço não conta como letra — apenas indica que a palavra tem mais de
-                                    um elemento.</p>
+                                <h3>Palavra oculta</h3>
+                                <p>Os quadrados que representam a <strong>palavra oculta</strong> são organizados de
+                                    forma alinhada e uniforme, criando uma leitura clara da quantidade de letras da
+                                    resposta. Cada espaço funciona como um “placeholder”, indicando ao jogador quantas
+                                    letras ainda precisam ser descobertas.</p>
+                                <p>Quando uma letra é acertada, ela aparece dentro do quadrado correspondente,
+                                    destacando-se em contraste com os demais espaços vazios. Já os quadrados não
+                                    preenchidos mantêm um visual discreto, reforçando o mistério da palavra.</p>
+
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- SECTION: MODOS -->
-                <div class="section">
-                    <div class="section-title">06 — Modos de jogo</div>
-                    <div class="modes-grid">
-                        <div class="mode-card">
-                            <div class="mode-icon">👤</div>
-                            <h3>Um jogador</h3>
-                            <p>Escolha uma <strong>categoria</strong> — história, geografia, matemática, filosofia, TI,
-                                cibersegurança ou cultura pop — e o jogo sorteia automaticamente uma palavra do banco
-                                para você adivinhar.</p>
-                            <div class="mode-tag">Solo</div>
-                        </div>
-                        <div class="mode-card">
-                            <div class="mode-icon">👥</div>
-                            <h3>Multijogador</h3>
-                            <p>Um jogador <strong>digita a palavra e a dica</strong> em segredo (os campos ficam
-                                ocultos). Depois passa o dispositivo para o outro jogador tentar adivinhar. Diversão
-                                garantida com amigos!</p>
-                            <div class="mode-tag">Multiplayer</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECTION: CATEGORIAS -->
-                <div class="section">
-                    <div class="section-title">07 — Categorias disponíveis</div>
-                    <div class="cats-grid">
-                        <div class="cat"><span>🎲</span> Aleatório</div>
-                        <div class="cat"><span>📚</span> História</div>
-                        <div class="cat"><span>🗺️</span> Geografia</div>
-                        <div class="cat"><span>🌍</span> Geopolítica</div>
-                        <div class="cat"><span>🧮</span> Matemática</div>
-                        <div class="cat"><span>💡</span> Filosofia</div>
-                        <div class="cat"><span>💻</span> TI / Programação</div>
-                        <div class="cat"><span>🔒</span> Cibersegurança</div>
-                        <div class="cat"><span>🎬</span> Cultura Pop</div>
-                    </div>
-                </div>
-
-                <!-- SECTION: PASSO A PASSO -->
-                <div class="section">
-                    <div class="section-title">08 — Passo a passo</div>
                     <div class="steps">
                         <div class="step">
-                            <div class="step-num">1</div>
-                            <div class="step-body">
-                                <h3>Clique em "Iniciar"</h3>
-                                <p>Na tela inicial, pressione <strong>Iniciar</strong> para entrar no menu de modos de
-                                    jogo.</p>
+                            <div class="step-body step-img">
+                                <img src="assets/fotos_como_jogar/palavra_oculta.png" alt="Quadrados da palavra oculta">
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SECTION: TECLADO -->
+                    <div class="section">
+                        <div class="section-title">03 — O teclado e a interação com as</div>
+
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-body">
+                                    <h3>Teclado do jogo e sua interação com a palavra oculta</h3>
+                                    <p>Logo abaixo, o jogador visualiza o teclado com todas as letras do alfabeto,
+                                        permitindo selecionar suas tentativas de forma simples e intuitiva. A letra
+                                        escolhida ganha destaque, indicando a interação do usuário durante a rodada.</p>
+
+                                </div>
+
                             </div>
                         </div>
-                        <div class="step">
-                            <div class="step-num">2</div>
-                            <div class="step-body">
-                                <h3>Escolha o modo</h3>
-                                <p>Selecione <strong>Um jogador</strong> (sorteia uma palavra) ou
-                                    <strong>Multijogador</strong> (um jogador digita a palavra para o outro adivinhar).
-                                </p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">3</div>
-                            <div class="step-body">
-                                <h3>Escolha a categoria (modo solo)</h3>
-                                <p>No modo solo, escolha um dos <strong>9 temas</strong> disponíveis. O modo
-                                    <code>Aleatório</code> sorteia entre todas as categorias.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">4</div>
-                            <div class="step-body">
-                                <h3>Adivinhe a palavra</h3>
-                                <p>Clique nas <strong>letras do teclado</strong> para tentar adivinhar. Letras certas
-                                    aparecem reveladas em verde; letras erradas ficam marcadas em vermelho.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">5</div>
-                            <div class="step-body">
-                                <h3>Use a dica com inteligência</h3>
-                                <p>Se estiver travado, toque no ícone <strong>💡</strong> para revelar o tema ou uma
-                                    dica sobre a palavra.</p>
-                            </div>
-                        </div>
-                        <div class="step">
-                            <div class="step-num">6</div>
-                            <div class="step-body">
-                                <h3>Ganhe ou perca — jogue de novo!</h3>
-                                <p>Adivinhe todas as letras para <strong>vencer</strong>. Se errar 7 vezes, o boneco cai
-                                    e o jogo termina. Clique em <strong>Jogar novamente</strong> para uma nova rodada!
-                                </p>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-body step-img">
+                                    <img src="assets/fotos_como_jogar/jogando.gif" alt="gif jogando jogo da forca">
+
+                                    <ul>
+                                        <li style="color: #AFB6BB;">■ Letra não selecionada</li>
+                                        <li style="color: #09ab80;">■ Acerto</li>
+                                        <li style="color: #ab0944;">■ Erro</li>
+                                    </ul>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- DICA EXTRA -->
-                <div class="section">
-                    <div class="section-title">09 — Dica extra</div>
-                    <div class="tip-box">
-                        <div class="tip-icon">🎵</div>
-                        <p>O jogo tem <strong>trilha sonora e efeitos de som</strong>! Use o botão de volume no canto
-                            superior direito para ativar a música de fundo e tornar a experiência ainda mais imersiva.
-                            Os sons mudam conforme você acerta, erra ou termina a partida.</p>
+                    <!-- SECTION: VIDAS -->
+                    <div class="section">
+                        <div class="section-title">04 — As vidas</div>
+
+                        <div class="step">
+                            <div class="step-body">
+                                <h3>As vidas do jogador durante a partida</h3>
+                                <p>O jogo conta com um sistema de 7 vidas (❤️❤️❤️❤️❤️❤️❤️) que representa, de forma
+                                    visual, o progresso — ou o erro — do jogador durante a partida.</p>
+                                <p>A cada tentativa incorreta, uma nova parte do corpo do boneco é desenhada na tela,
+                                    tornando clara a consequência de cada erro. Esse processo acontece de forma gradual,
+                                    criando uma tensão natural a cada jogada.</p>
+                                <p>Conforme as vidas vão se esgotando, o boneco vai sendo completado até atingir seu
+                                    estado final: ao perder todas as tentativas, ele “morre” e se transforma em um
+                                    fantasma, marcando o fim da rodada de maneira visual e simbólica.</p>
+                                <p>Esse recurso não só mantém a essência clássica do <strong>jogo da forca</strong>,
+                                    como também reforça o senso de urgência e engajamento do jogador a cada escolha.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="steps">
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-body step-img">
+                                    <img src="assets/fotos/gif_vidas.gif" alt="Quadrados da palavra oculta">
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- SECTION: DICA -->
+                        <div class="section">
+                            <div class="section-title">05 — A dica</div>
+                            <div class="steps">
+                                <div class="step">
+                                    <div class="step-body">
+                                        <h3>Usando a dica ou tema</h3>
+                                        <p>Durante o jogo há um botão de <strong>lâmpada</strong> (💡) que revela o tema
+                                            ou
+                                            uma
+                                            dica relacionada à palavra. Use com sabedoria — ela pode ser o empurrão que
+                                            faltava
+                                            para descobrir a resposta!</p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-body">
+                                        <h3>Acentos e caracteres especiais</h3>
+                                        <p>O jogo aceita letras com acento automaticamente. Por exemplo: ao pressionar
+                                            <code>A</code>, o sistema reconhece tanto <strong>A</strong> quanto
+                                            <strong>Á,
+                                                Â, Ã,
+                                                À</strong>. Você nunca precisa se preocupar com acentuação!
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="step">
+                                    <div class="step-body">
+                                        <h3>Palavras compostas</h3>
+                                        <p>Palavras com hífen ou espaço são exibidas com um <strong>traço
+                                                visível</strong>
+                                            entre
+                                            as partes. Esse traço não conta como letra — apenas indica que a palavra tem
+                                            mais de
+                                            um elemento.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SECTION: MODOS -->
+                        <div class="section">
+                            <div class="section-title">06 — Modos de jogo</div>
+                            <div class="modes_flex">
+                                <div class="flex_aux">
+                                    <div class="mode-card">
+
+                                        <div class="mode-icon"><ion-icon name="person"></ion-icon></div>
+                                        <h3>Um jogador</h3>
+                                        <p>Escolha uma <strong>categoria</strong> — história, geografia, matemática,
+                                            filosofia,
+                                            TI,
+                                            cibersegurança ou cultura pop — e o jogo sorteia automaticamente uma palavra
+                                            do
+                                            banco
+                                            para você adivinhar.</p>
+                                        <div class="mode-tag">Solo</div>
+                                    </div>
+                                    <div class="mode-card">
+                                        <div class="mode-icon"><ion-icon name="people"></ion-icon></div>
+                                        <h3>Multijogador</h3>
+                                        <p>Um jogador <strong>digita a palavra e a dica</strong> em segredo (os campos
+                                            ficam
+                                            ocultos). Depois passa o dispositivo para o outro jogador tentar adivinhar.
+                                            Diversão
+                                            garantida com amigos!</p>
+                                        <div class="mode-tag">Multiplayer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION: CATEGORIAS -->
+                    <div class="section">
+                        <div class="section-title">07 — Categorias disponíveis</div>
+                        <div class="cats-grid">
+                            <div class="btn"><span><ion-icon name="reload-circle"></ion-icon></span> Aleatório</div>
+                            <div class="btn"><span><ion-icon name="library"></ion-icon></span> História</div>
+                            <div class="btn"><span><ion-icon name="map"></ion-icon></span> Geografia</div>
+                            <div class="btn"><span><ion-icon name="earth"></ion-icon></span> Geopolítica</div>
+                            <div class="btn"><span><ion-icon name="calculator"></ion-icon></span> Matemática</div>
+                            <div class="btn"><span><ion-icon name="bulb"></ion-icon></span> Filosofia</div>
+                            <div class="btn"><span><ion-icon name="terminal"></ion-icon></span> TI / Programação
+                            </div>
+                            <div class="btn"><span><ion-icon name="bug"></ion-icon></span> Cibersegurança</div>
+                            <div class="btn"><span><ion-icon name="film"></ion-icon></span> Cultura Pop</div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION: PASSO A PASSO -->
+                    <div class="section">
+                        <div class="section-title">08 — Passo a passo</div>
+                        <div class="steps">
+                            <div class="step">
+                                <div class="step-num">1</div>
+                                <div class="step-body">
+                                    <h3>Clique em "Iniciar"</h3>
+                                    <p>Na tela inicial, pressione <strong>Iniciar</strong> para entrar no menu de
+                                        modos
+                                        de
+                                        jogo.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">2</div>
+                                <div class="step-body">
+                                    <h3>Escolha o modo</h3>
+                                    <p>Selecione <strong>Um jogador</strong> (sorteia uma palavra) ou
+                                        <strong>Multijogador</strong> (um jogador digita a palavra para o outro
+                                        adivinhar).
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">3</div>
+                                <div class="step-body">
+                                    <h3>Escolha a categoria (modo solo)</h3>
+                                    <p>No modo solo, escolha um dos <strong>9 temas</strong> disponíveis. O modo
+                                        <code>Aleatório</code> sorteia entre todas as categorias.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">4</div>
+                                <div class="step-body">
+                                    <h3>Adivinhe a palavra</h3>
+                                    <p>Clique nas <strong>letras do teclado</strong> para tentar adivinhar. Letras
+                                        certas
+                                        aparecem reveladas em verde; letras erradas ficam marcadas em vermelho.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">5</div>
+                                <div class="step-body">
+                                    <h3>Use a dica com inteligência</h3>
+                                    <p>Se estiver travado, toque no ícone <strong>💡</strong> para revelar o tema ou
+                                        uma
+                                        dica sobre a palavra.</p>
+                                </div>
+                            </div>
+                            <div class="step">
+                                <div class="step-num">6</div>
+                                <div class="step-body">
+                                    <h3>Ganhe ou perca — jogue de novo!</h3>
+                                    <p>Adivinhe todas as letras para <strong>vencer</strong>. Se errar 7 vezes, o
+                                        boneco
+                                        cai
+                                        e o jogo termina. Clique em <strong>Jogar novamente</strong> para uma nova
+                                        rodada!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DICA EXTRA -->
+                    <div class="section">
+                        <div class="section-title">09 — Dica extra</div>
+                        <div class="tip-box">
+                            <div class="flex_aux">
+                                <div class="tip-icon">🎵</div>
+                                <p>O jogo tem <strong>trilha sonora e efeitos de som</strong>! Use o botão de volume no
+                                    canto
+                                    superior direito para ativar a música de fundo e tornar a experiência ainda mais
+                                    imersiva.
+                                    Os sons mudam conforme você acerta, erra ou termina a partida.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="cta">
+                        <h3>Pronto para jogar?</h3>
+                        <p>Você já sabe tudo que precisa. Agora é hora de testar seus conhecimentos!</p>
+                        <button class="btn" onclick="game(2); btn_som();"><ion-icon name="play"></ion-icon>Começar a
+                            jogar</button>
                     </div>
                 </div>
-
-                <!-- CTA -->
-                <div class="cta">
-                    <h3>Pronto para jogar?</h3>
-                    <p>Você já sabe tudo que precisa. Agora é hora de testar seus conhecimentos!</p>
-                    <button class="btn-play" onclick="window.history.back()">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                        </svg>
-                        Começar a jogar
-                    </button>
-                </div>
-            </div>
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
 
@@ -412,8 +509,12 @@
                 <button class="btn" onclick="game(2); btn_som();"><ion-icon name="arrow-undo"></ion-icon>
                     Voltar</button>
             </header>
-            <div class="escolha_modo tela_container">
-                <h2 class="sub">Escolha um tema para o seu jogo</h2>
+            <div class="escolha_modo tela_container height_tela">
+                <!-- title -->
+                <div class="title_page">
+                    <div class="title_badge">Um jogador</div>
+                    <h2>Escolha uma <span>categoria</span> para o seu jogo</h2>
+                </div>
                 <div class="modos btn_container">
 
                     <!-- botões referentes as categorias das palavras do game -->
@@ -579,93 +680,6 @@
         </section>
         <!-- ---------------------------------------------------------------------------------------------------- -->
 
-
-        <!-- TELA 9  ---------------------------------------------------------------------------------------------------- -->
-        <!-- Jogo da velha -->
-
-        <section id="jogo_da_velha" class="section_forca container_jogo">
-            <div class="jogo tela_container">
-                <!-- titulo do jogo da velha -->
-
-                <h1 class="titulo_game">Jogo da velha</h1>
-
-
-                <!-- jogo da velha -->
-                <div class="botoes_jogo">
-                    <button class="btn_game" onclick="game(1)" id="btn_1"
-                        style=" border-width: 0px 5px 5px 0px;"></button>
-                    <button class="btn_game" onclick="game(2)" id="btn_2"
-                        style=" border-width: 0px 5px 5px 5px;"></button>
-                    <button class="btn_game" onclick="game(3)" id="btn_3"
-                        style=" border-width: 0px 0px 5px 5px;"></button>
-                    <button class="btn_game" onclick="game(4)" id="btn_4"
-                        style=" border-width: 5px 5px 5px 0px;"></button>
-                    <button class="btn_game" onclick="game(5)" id="btn_5"
-                        style=" border-width: 5px 5px 5px 5px;"></button>
-                    <button class="btn_game" onclick="game(6)" id="btn_6"
-                        style=" border-width: 5px 0px 5px 5px;"></button>
-                    <button class="btn_game" onclick="game(7)" id="btn_7"
-                        style=" border-width: 5px 5px 0px 0px;"></button>
-                    <button class="btn_game" onclick="game(8)" id="btn_8"
-                        style=" border-width: 5px 5px 0px 5px;"></button>
-                    <button class="btn_game" onclick="game(9)" id="btn_9"
-                        style=" border-width: 5px 0px 0px 5px;"></button>
-                </div>
-                <!-- turno do jogo e ganhador -->
-                <div id="turno_ganhador">
-                    <p>Vez do jogador:<span>X</span></p>
-                </div>
-                <div class="reiniciar">
-                    <button onclick="reiniciar_game(true);" class="reiniciar_btn">Novo Jogo</button>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ---------------------------------------------------------------------------------------------------- -->
-
-        <!-- TELA 10 ---------------------------------------------------------------------------------------------------- -->
-        <!-- Jogo do numero secreto -->
-        <section id="Jogo_n_secreto" class=" section_forca Jogo_n_secreto">
-            <div class="tela_container">
-                <h1 class="titulo_game">Jogo do N° secreto</h1>
-
-                <div class="game">
-                    <input type="number" id="numero_imput" placeholder="">
-                    <button id="enviar_n_imput">Chutar</button>
-                </div>
-
-                <div class="parametros_do_game">
-                    <p id="parametro_n_secreto">Escolha um número de <span>1 a 100</span></p>
-                </div>
-
-                <div class="reiniciar">
-                    <button class="reiniciar_btn">Novo Jogo</button>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ---------------------------------------------------------------------------------------------------- -->
-
-
-        <!-- TELA 11 ---------------------------------------------------------------------------------------------------- -->
-        <!-- Jogo da memória -->
-        <section id="jogo_da_memoria" class="jogo_memoria section_forca">
-            <div class="tela_container">
-                <h1 class="titulo_game">Jogo da memória</h1>
-                <div id="jogo">
-
-                </div>
-                <div class="descoberto" id="ponto">
-
-                </div>
-                <div class="reiniciar">
-                    <button class="reiniciar_btn">Novo Jogo</button>
-                </div>
-            </div>
-        </section>
-        <!-- ---------------------------------------------------------------------------------------------------- -->
 
 
 

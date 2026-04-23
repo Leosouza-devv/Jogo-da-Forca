@@ -9,16 +9,7 @@
     flex-direction: column;
     gap: 30px;
     position: relative;    
-    padding-top: 15vh;
 
-    
-
-    & footer {
-        position: absolute;
-        bottom: 5%;
-        right: 2%;
-        margin: 10px;
-    }
 
 
     & div.escolha_modo {
@@ -31,7 +22,7 @@
         text-align: left;
         gap: 50px;
 
-        padding: 25px;
+
         & div.modos{
             display: flex;
             justify-content: center;
@@ -48,3 +39,5 @@
         }
     }
 }
+
+

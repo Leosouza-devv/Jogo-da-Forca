@@ -1,4 +1,4 @@
-/*Importação das variaveis*/ 
+/*Importação das variaveis*/
 @use "../abstracts/variable";
 
 /* estilizando tela(3) de coleta de palavras */
@@ -8,29 +8,16 @@
     justify-content: center;
     gap: 20px;
     position: relative;
+    gap: 36px;
 
 
     /* (INICIO)estilizando elementos que pertencem a section #coletor_palavras  */
 
 
-    
 
-    & footer {
-        position: absolute;
-        bottom: 5%;
-        right: 2%;
-        margin: 10px;
-    }
 
-    & div {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        text-align: left;
-        gap: 40px;
-    }
+
+
 
     /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
 
@@ -45,86 +32,102 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 18px;
 
-        /* estilizando o alerta caso o texto não for mensionado */
-        & .palavra,
-        & .tema {
-
-            flex-direction: row;
+        div.container_inputs {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-wrap: nowrap;
-            transition: ease-in-out .2s;
+            width: 100%;
+            text-align: left;
+            gap: 36px;
 
-            /* estilizando sinal de alerta */
-            & div {
-                right: 0;
+
+
+            /* estilizando o alerta caso o texto não for mensionado */
+            & .palavra,
+            & .tema {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                gap: 10px;
                 transition: ease-in-out .2s;
-                display: none;
-                min-width: 50px;
-                max-width: 50px;
-                min-height: 50px;
-                max-height: 50px;
-                font-size: 40px;
-                border-radius: 15px;
-                background-color: var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
-                color: variable.$cor_letra_branca;
 
 
+                // estolização do input
+                & input.input_coletor {
+                    width: 100%;
+                    min-width: 50dvw;
+                    max-width: fit-content;
+                    min-height: 7dvh;
+                    max-height: fit-content;
+                    border-radius: 20px;
+                    outline: none;
+                    border: solid 6px var(--buttom_js);
+                    /*esta cor ira ser trabalhada no js posteriormente*/
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 2.5%;
+                    color: #252528;
+                    font-weight: bold;
+                    transition: ease-in-out .2s;
+
+
+                    /* estilizando o placeholder do input */
+                    &::placeholder {
+                        font-size: 20px;
+                        position: absolute;
+                        left: 2.5%;
+                        font-weight: bold;
+                        color: variable.$cor_letra_cinza_claro;
+                    }
+
+                    /* estilizando o input ativado */
+                    &:focus {
+                        transform: scale(1.05);
+                    }
+
+
+                }
+
+                /* estilizando sinal de alerta */
+                & div {
+
+                    transition: ease-in-out .2s;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    min-width: 50px;
+                    max-width: 50px;
+                    min-height: 50px;
+                    max-height: 50px;
+                    font-size: 40px;
+                    border-radius: 15px;
+                    background-color: var(--buttom_js);
+                    /*esta cor ira ser trabalhada no js posteriormente*/
+                    color: variable.$cor_letra_branca;
+
+
+                }
             }
         }
 
     }
 
-    & .sub_tit_temaEpalavra {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: variable.$font_gameficada;
-        font-size: 30px;
-        color: variable.$cor_letra_branca;
-        text-align: center;
 
+
+
+    & footer {
+        position: absolute;
+        bottom: 5%;
+        right: 2%;
+        margin: 10px;
     }
-
-    & input.input_coletor {
-        width: 80%;
-        min-width: 200px;
-        max-width: 100%;
-        min-height: 7.5vh;
-        max-height: fit-content;
-        border-radius: 20px;
-        outline: none;
-        border: solid 6px var(--buttom_js);/*esta cor ira ser trabalhada no js posteriormente*/
-        font-size: 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 2.5%;
-        color: #252528;
-        font-weight: bold;
-        transition: ease-in-out .2s;
-
-
-        /* estilizando o placeholder do input */
-        &::placeholder {
-            font-size: 20px;
-            position: absolute;
-            left: 2.5%;
-            font-weight: bold;
-            color: variable.$cor_letra_cinza_claro;
-        }
-
-        /* estilizando o input ativado */
-        &:focus {
-            transform: scale(1.05);
-        }
-
-
-    }
-
-
 
 
 

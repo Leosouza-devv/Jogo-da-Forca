@@ -4,10 +4,10 @@
 .title-bar {
     width: 100%;
     height: 35px;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 99999;
-    background: variable.$cor_fundo_escuro;
+    background: variable.$cor_fundo;
     color: variable.$cor_letra_branca;
     display: flex;
     justify-content: space-between;

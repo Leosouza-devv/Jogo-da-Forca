@@ -158,9 +158,8 @@ body::before {
 
 header.btn_voltar {
   position: absolute;
-  top: 7%;
+  top: 6%;
   left: 2%;
-  margin: 10px;
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -190,25 +189,30 @@ div.olho_container {
   width: 100%;
   height: 5dvh;
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 div.olho_container .olho {
-  width: fit-content;
+  width: 100%;
+  min-width: fit-content;
   height: fit-content;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  gap: 10px;
   background-color: rgb(40, 40, 44);
   border: 0;
   cursor: pointer;
+  color: #AFB6BB;
+  font-size: 20px;
+  font-family: "Silkscreen", sans-serif;
+  transition: ease-in-out transform 0.2s;
 }
 div.olho_container .olho ion-icon {
   font-size: 50px;
-  color: #AFB6BB;
-  transition: ease-in-out transform 0.2s;
 }
-div.olho_container .olho:hover > ion-icon {
-  transform: scale(1.1);
-  color: #fff;
+div.olho_container .olho:hover {
+  transform: scale(1.05);
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -260,7 +264,7 @@ body main section.section_forca {
   flex-wrap: wrap;
   /* O display das telas é por padrão 'none' para ser atualizado no JS dependendo de qual tela você esteja, menos a tela 1. */
 }
-body main section.section_forca:nth-child(2), body main section.section_forca:nth-child(3), body main section.section_forca:nth-child(4), body main section.section_forca:nth-child(5), body main section.section_forca:nth-child(6), body main section.section_forca:nth-child(7), body main section.section_forca:nth-child(8), body main section.section_forca:nth-child(9), body main section.section_forca:nth-child(10), body main section.section_forca:nth-child(11), body main section.section_forca:nth-child(12) {
+body main section.section_forca:nth-child(2), body main section.section_forca:nth-child(3), body main section.section_forca:nth-child(4), body main section.section_forca:nth-child(5), body main section.section_forca:nth-child(6), body main section.section_forca:nth-child(7), body main section.section_forca:nth-child(8), body main section.section_forca:nth-child(9) {
   display: none;
 }
 body main section.section_forca div.tela_container {
@@ -269,7 +273,6 @@ body main section.section_forca div.tela_container {
   justify-content: space-between;
   width: 100%;
   min-height: fit-content;
-  padding: 25px;
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -298,10 +301,10 @@ body main section.section_forca div.tela_container {
 .title-bar {
   width: 100%;
   height: 35px;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 99999;
-  background: rgb(33, 33, 36);
+  background: rgb(40, 40, 44);
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -408,6 +411,65 @@ footer#rodape_site div.devs {
 footer#rodape_site div.direitos {
   font-size: 15px;
   color: #11be90;
+}
+
+/* cores trabalhadas posteriomente no js */
+:root {
+  --buttom_js: #ffd490;
+  --letra_forca_js:#fff;
+  /* paleta de cor */
+  --color_0:#f4f4f4;
+  --color_1:#ffffff;
+  --color_2:#75a0ff;
+  --color_3:#f0af7d;
+  --color_3_1:#d59b6f;
+  --color_4:#2a2c2f;
+  --color_5:#313336;
+  --color_6:#38393c;
+  --color_7:#48494d;
+}
+
+/*(INICIO) VARIAVEIS CSS */
+/* cores dos fundos */
+/* cores das letras */
+/* font-family */
+/* cores dos botões */
+/* cores trabalhadas posteriomente no js */
+/*Importação das variaveis*/
+.title_page {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.title_page .title_badge {
+  display: inline-block;
+  background: #ffd490;
+  color: rgb(40, 40, 44);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 4px 14px;
+  border-radius: 999px;
+  margin-bottom: 1rem;
+}
+.title_page h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #fff;
+  font-family: "Silkscreen", sans-serif;
+}
+.title_page h2 span {
+  color: #038764;
+}
+.title_page p {
+  font-size: 18px;
+  color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.7;
 }
 
 /* cores trabalhadas posteriomente no js */
@@ -575,7 +637,7 @@ footer#rodape_site div.direitos {
     font-size: 35px;
   }
   .btn {
-    font-size: 25px;
+    transform: scale(0.9);
   }
 }
 @media (max-width: 700px) {
@@ -619,8 +681,15 @@ footer#rodape_site div.direitos {
   h2.sub {
     font-size: 35px;
   }
-  .btn {
-    font-size: 25px;
+}
+@media (min-height: 700px) {
+  .height_tela {
+    padding: 10vh 25px;
+  }
+}
+@media (max-height: 700px) {
+  .height_tela {
+    padding: 40vh 25px;
   }
 }
 @media (max-width: 640px) {
@@ -664,9 +733,6 @@ footer#rodape_site div.direitos {
   h2.sub {
     font-size: 25px;
   }
-  .btn {
-    font-size: 25px;
-  }
 }
 @media (max-width: 560px) {
   main {
@@ -705,9 +771,6 @@ footer#rodape_site div.direitos {
   /* estilização geral [todas as paginas]*/
   h1.name_game {
     font-size: 35px;
-  }
-  .btn {
-    font-size: 25px;
   }
 }
 @media (max-width: 480px) {
@@ -754,9 +817,6 @@ footer#rodape_site div.direitos {
   h1.name_game {
     font-size: 30px;
   }
-  .btn {
-    font-size: 20px;
-  }
 }
 @media (max-width: 400px) {
   main {
@@ -797,9 +857,6 @@ footer#rodape_site div.direitos {
   /* estilização geral [todas as paginas]*/
   h1.name_game {
     font-size: 27px;
-  }
-  .btn {
-    font-size: 18px;
   }
 }
 /* (FIM) Estilização mobile [todas as telas] */
@@ -907,13 +964,6 @@ footer#rodape_site div.direitos {
   flex-direction: column;
   gap: 30px;
   position: relative;
-  padding-top: 15vh;
-}
-.modoJogo_categoria footer {
-  position: absolute;
-  bottom: 5%;
-  right: 2%;
-  margin: 10px;
 }
 .modoJogo_categoria div.escolha_modo {
   display: flex;
@@ -924,7 +974,6 @@ footer#rodape_site div.direitos {
   max-width: 1440px;
   text-align: left;
   gap: 50px;
-  padding: 25px;
 }
 .modoJogo_categoria div.escolha_modo div.modos {
   display: flex;
@@ -969,24 +1018,8 @@ footer#rodape_site div.direitos {
   justify-content: center;
   gap: 20px;
   position: relative;
+  gap: 36px;
   /* (INICIO)estilizando elementos que pertencem a section #coletor_palavras  */
-}
-#coletor_palavra footer {
-  position: absolute;
-  bottom: 5%;
-  right: 2%;
-  margin: 10px;
-}
-#coletor_palavra div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  text-align: left;
-  gap: 40px;
-}
-#coletor_palavra {
   /* (FIM)estilizando elementos que pertencem a section #coletor_palavras  */
   /* (INICIO) estilizando os inputs que recebe a palavra e as dicas */
 }
@@ -999,49 +1032,38 @@ footer#rodape_site div.direitos {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 18px;
+}
+#coletor_palavra div.tema_palavra div.container_inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  gap: 36px;
   /* estilizando o alerta caso o texto não for mensionado */
 }
-#coletor_palavra div.tema_palavra .palavra, #coletor_palavra div.tema_palavra .tema {
+#coletor_palavra div.tema_palavra div.container_inputs .palavra, #coletor_palavra div.tema_palavra div.container_inputs .tema {
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
+  gap: 10px;
   transition: ease-in-out 0.2s;
-  /* estilizando sinal de alerta */
 }
-#coletor_palavra div.tema_palavra .palavra div, #coletor_palavra div.tema_palavra .tema div {
-  right: 0;
-  transition: ease-in-out 0.2s;
-  display: none;
-  min-width: 50px;
-  max-width: 50px;
-  min-height: 50px;
-  max-height: 50px;
-  font-size: 40px;
-  border-radius: 15px;
-  background-color: var(--buttom_js); /*esta cor ira ser trabalhada no js posteriormente*/
-  color: #fff;
-}
-#coletor_palavra .sub_tit_temaEpalavra {
+#coletor_palavra div.tema_palavra div.container_inputs .palavra input.input_coletor, #coletor_palavra div.tema_palavra div.container_inputs .tema input.input_coletor {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: "Silkscreen", sans-serif;
-  font-size: 30px;
-  color: #fff;
-  text-align: center;
-}
-#coletor_palavra input.input_coletor {
-  width: 80%;
-  min-width: 200px;
-  max-width: 100%;
-  min-height: 7.5vh;
+  min-width: 50dvw;
+  max-width: fit-content;
+  min-height: 7dvh;
   max-height: fit-content;
   border-radius: 20px;
   outline: none;
-  border: solid 6px var(--buttom_js); /*esta cor ira ser trabalhada no js posteriormente*/
-  font-size: 20px;
+  border: solid 6px var(--buttom_js);
+  /*esta cor ira ser trabalhada no js posteriormente*/
+  font-size: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1051,58 +1073,327 @@ footer#rodape_site div.direitos {
   transition: ease-in-out 0.2s;
   /* estilizando o placeholder do input */
 }
-#coletor_palavra input.input_coletor::placeholder {
+#coletor_palavra div.tema_palavra div.container_inputs .palavra input.input_coletor::placeholder, #coletor_palavra div.tema_palavra div.container_inputs .tema input.input_coletor::placeholder {
   font-size: 20px;
   position: absolute;
   left: 2.5%;
   font-weight: bold;
   color: #AFB6BB;
 }
-#coletor_palavra input.input_coletor {
+#coletor_palavra div.tema_palavra div.container_inputs .palavra input.input_coletor, #coletor_palavra div.tema_palavra div.container_inputs .tema input.input_coletor {
   /* estilizando o input ativado */
 }
-#coletor_palavra input.input_coletor:focus {
+#coletor_palavra div.tema_palavra div.container_inputs .palavra input.input_coletor:focus, #coletor_palavra div.tema_palavra div.container_inputs .tema input.input_coletor:focus {
   transform: scale(1.05);
+}
+#coletor_palavra div.tema_palavra div.container_inputs .palavra, #coletor_palavra div.tema_palavra div.container_inputs .tema {
+  /* estilizando sinal de alerta */
+}
+#coletor_palavra div.tema_palavra div.container_inputs .palavra div, #coletor_palavra div.tema_palavra div.container_inputs .tema div {
+  transition: ease-in-out 0.2s;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-width: 50px;
+  max-width: 50px;
+  min-height: 50px;
+  max-height: 50px;
+  font-size: 40px;
+  border-radius: 15px;
+  background-color: var(--buttom_js);
+  /*esta cor ira ser trabalhada no js posteriormente*/
+  color: #fff;
+}
+#coletor_palavra footer {
+  position: absolute;
+  bottom: 5%;
+  right: 2%;
+  margin: 10px;
 }
 #coletor_palavra {
   /* (FIM) estilizando os inputs que recebe a palavra e as dicas */
 }
 
+/* ---------- containers_principais ---------- */
 .tela_funcionamento {
-  width: 80dvh;
-  max-width: 1440px;
-  min-height: 100dvh;
-  max-height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10vh 0 5vh 0;
+  gap: 2.5rem;
+  width: 80dvw;
+  max-width: 1440px;
+  overflow: hidden;
+  padding: 20vh 0 5vh 0;
+}
+.tela_funcionamento .section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-height: fit-content;
+}
+.tela_funcionamento .section .section-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Silkscreen", sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #AFB6BB;
+  border-bottom: 1px solid #AFB6BB;
+  padding-top: 72px;
 }
 
-/* cores trabalhadas posteriomente no js */
-:root {
-  --buttom_js: #ffd490;
-  --letra_forca_js:#fff;
-  /* paleta de cor */
-  --color_0:#f4f4f4;
-  --color_1:#ffffff;
-  --color_2:#75a0ff;
-  --color_3:#f0af7d;
-  --color_3_1:#d59b6f;
-  --color_4:#2a2c2f;
-  --color_5:#313336;
-  --color_6:#38393c;
-  --color_7:#48494d;
+/* ---------- Steps (passos / itens) ---------- */
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
-/*(INICIO) VARIAVEIS CSS */
-/* cores dos fundos */
-/* cores das letras */
-/* font-family */
-/* cores dos botões */
-/* cores trabalhadas posteriomente no js */
-/*Importação das variaveis*/
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-num {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background-color: #ffd490;
+  color: rgb(40, 40, 44);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Silkscreen", sans-serif;
+  font-size: 24px;
+}
+
+.step-body {
+  width: 95%;
+  height: fit-content;
+  background: #fff;
+  border-radius: 24px;
+  padding: 1rem 1.25rem;
+  box-shadow: -6px 6px 0px #ffd490;
+}
+.step-body h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px;
+  color: #1a1a1a;
+}
+.step-body p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+}
+.step-body ul {
+  font-size: 14px;
+  text-indent: 18px;
+  list-style: "";
+  flex-wrap: wrap;
+}
+.step-body ul li {
+  color: #1a1a1a;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.step-body.step-img {
+  background-color: rgb(40, 40, 44);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 100%;
+  min-height: 100%;
+  box-shadow: 0 0 0;
+}
+.step-body.step-img img {
+  border-radius: 24px;
+  min-width: 300px;
+  min-height: none;
+  max-width: 300px;
+  max-height: 300px;
+  padding: 20px;
+}
+.step-body.step-img ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Modos de jogo ---------- */
+.modes_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  gap: 12px;
+}
+.modes_flex div.flex_aux {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.mode-card {
+  flex: 1 300px;
+  width: 95%;
+  min-height: 300px;
+  background: #fff;
+  box-shadow: -6px 6px 0 #ffd490;
+  border-radius: 24px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mode-icon {
+  font-size: 24px;
+}
+
+.mode-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.mode-card p {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+  line-height: 1.6;
+  flex: 1;
+}
+
+.mode-tag {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: #ffd490;
+  color: rgb(40, 40, 44);
+}
+
+/* ---------- Grid de categorias ---------- */
+.cats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 14px;
+  color: #555;
+  cursor: default;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.cat:hover {
+  border-color: var(--forca-accent);
+  color: var(--forca-accent-dark);
+}
+
+.cat span {
+  font-size: 16px;
+}
+
+/* ---------- Caixa de dica ---------- */
+.tip-box {
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}
+.tip-box div.flex_aux {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  box-shadow: -6px 6px 0 #ffd490;
+  border-radius: 24px;
+  padding: 1.25rem;
+}
+
+.tip-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.tip-box p {
+  font-size: 14px;
+  color: var(--forca-gold-text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ---------- CTA final ---------- */
+.cta {
+  text-align: center;
+  padding: 2rem 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cta h3 {
+  font-size: 36px;
+  font-weight: 600;
+  margin: 0 0 8px;
+  font-family: "Silkscreen", sans-serif;
+}
+
+.cta p {
+  font-size: 18px;
+  margin: 0 0 1.25rem;
+}
+
+/* ---------- Responsivo ---------- */
+@media (max-width: 480px) {
+  .hero h2 {
+    font-size: 24px;
+  }
+  .modes-grid {
+    grid-template-columns: 1fr;
+  }
+  .kb-key {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .step {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 /* cores trabalhadas posteriomente no js */
 :root {
   --buttom_js: #ffd490;

@@ -37,10 +37,7 @@ body{
             &:nth-child(6), 
             &:nth-child(7), 
             &:nth-child(8),
-            &:nth-child(9),
-            &:nth-child(10),
-            &:nth-child(11),
-            &:nth-child(12){
+            &:nth-child(9){
                 display: none;
             }
 
@@ -51,7 +48,7 @@ body{
                 
                 width: 100%;
                 min-height: fit-content ;
-                padding:  25px;
+                
 
                 
             }
@@ -63,12 +60,12 @@ body{
 
 @import 'barra_do_app';
 @import 'footer';
+@import 'title_page';
 @import 'responsive';
 @import 'tela1_tela_inicial';
 @import 'tela2-5_modoJogo_categoria';
 @import 'tela3_coletor_palavras';
 @import 'tela4_como_funciona_o_jogo';
-@import 'tela5_categoria_do_jogo';
 @import 'tela6_game_forca';
 @import 'tela6.1_confirmacao_para_saida';
 @import 'tela7_jogar_novamente';
